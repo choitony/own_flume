@@ -1,0 +1,62 @@
+
+*****************************************************
+Summary
+-------
+Generated at: 2017-01-05T18:39:13+08:00
+Notes: 0
+Binaries: 0
+Archives: 0
+Standards: 25
+
+Apache Licensed: 25
+Generated Documents: 0
+
+JavaDocs are generated and so license header is optional
+Generated files do not required license headers
+
+0 Unknown Licenses
+
+*******************************
+
+Unapproved licenses:
+
+
+*******************************
+
+Archives:
+
+*****************************************************
+  Files with Apache License headers will be marked AL
+  Binary files (which do not require AL headers) will be marked B
+  Compressed archives will be marked A
+  Notices, licenses etc will be marked N
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-channels/flume-jdbc-channel/src/test/java/org/apache/flume/channel/jdbc/TestPersistentEvent.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-channels/flume-jdbc-channel/src/test/java/org/apache/flume/channel/jdbc/BaseJdbcChannelProviderTest.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-channels/flume-jdbc-channel/src/test/java/org/apache/flume/channel/jdbc/TestDatabaseTypeEnum.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-channels/flume-jdbc-channel/src/test/java/org/apache/flume/channel/jdbc/TestTransactionIsolationLevelEnum.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-channels/flume-jdbc-channel/src/test/java/org/apache/flume/channel/jdbc/TestDerbySchemaHandlerQueries.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-channels/flume-jdbc-channel/src/test/java/org/apache/flume/channel/jdbc/TestJdbcChannelProviderNoFK.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-channels/flume-jdbc-channel/src/test/java/org/apache/flume/channel/jdbc/TestJdbcChannelProvider.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-channels/flume-jdbc-channel/src/test/java/org/apache/flume/channel/jdbc/MockEvent.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-channels/flume-jdbc-channel/src/test/java/org/apache/flume/channel/jdbc/MockEventUtils.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-channels/flume-jdbc-channel/src/main/java/org/apache/flume/channel/jdbc/impl/DerbySchemaHandler.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-channels/flume-jdbc-channel/src/main/java/org/apache/flume/channel/jdbc/impl/JdbcTransactionImpl.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-channels/flume-jdbc-channel/src/main/java/org/apache/flume/channel/jdbc/impl/PersistableEvent.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-channels/flume-jdbc-channel/src/main/java/org/apache/flume/channel/jdbc/impl/JdbcChannelProviderImpl.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-channels/flume-jdbc-channel/src/main/java/org/apache/flume/channel/jdbc/impl/SchemaHandlerFactory.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-channels/flume-jdbc-channel/src/main/java/org/apache/flume/channel/jdbc/impl/MySQLSchemaHandler.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-channels/flume-jdbc-channel/src/main/java/org/apache/flume/channel/jdbc/impl/SchemaHandler.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-channels/flume-jdbc-channel/src/main/java/org/apache/flume/channel/jdbc/impl/JdbcTransactionFactory.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-channels/flume-jdbc-channel/src/main/java/org/apache/flume/channel/jdbc/DatabaseType.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-channels/flume-jdbc-channel/src/main/java/org/apache/flume/channel/jdbc/ConfigurationConstants.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-channels/flume-jdbc-channel/src/main/java/org/apache/flume/channel/jdbc/JdbcChannelException.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-channels/flume-jdbc-channel/src/main/java/org/apache/flume/channel/jdbc/TransactionIsolation.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-channels/flume-jdbc-channel/src/main/java/org/apache/flume/channel/jdbc/JdbcChannelProviderFactory.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-channels/flume-jdbc-channel/src/main/java/org/apache/flume/channel/jdbc/JdbcChannel.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-channels/flume-jdbc-channel/src/main/java/org/apache/flume/channel/jdbc/JdbcChannelProvider.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-channels/flume-jdbc-channel/pom.xml
+ 
+*****************************************************
+ Printing headers for files without AL header...
+ 
+ 

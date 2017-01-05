@@ -1,0 +1,44 @@
+
+*****************************************************
+Summary
+-------
+Generated at: 2017-01-05T18:40:01+08:00
+Notes: 0
+Binaries: 0
+Archives: 0
+Standards: 7
+
+Apache Licensed: 7
+Generated Documents: 0
+
+JavaDocs are generated and so license header is optional
+Generated files do not required license headers
+
+0 Unknown Licenses
+
+*******************************
+
+Unapproved licenses:
+
+
+*******************************
+
+Archives:
+
+*****************************************************
+  Files with Apache License headers will be marked AL
+  Binary files (which do not require AL headers) will be marked B
+  Compressed archives will be marked A
+  Notices, licenses etc will be marked N
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-clients/flume-ng-log4jappender/src/test/java/org/apache/flume/clients/log4jappender/TestLog4jAppenderWithAvro.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-clients/flume-ng-log4jappender/src/test/java/org/apache/flume/clients/log4jappender/TestLog4jAppender.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-clients/flume-ng-log4jappender/src/test/java/org/apache/flume/clients/log4jappender/TestLoadBalancingLog4jAppender.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-clients/flume-ng-log4jappender/src/main/java/org/apache/flume/clients/log4jappender/Log4jAvroHeaders.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-clients/flume-ng-log4jappender/src/main/java/org/apache/flume/clients/log4jappender/LoadBalancingLog4jAppender.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-clients/flume-ng-log4jappender/src/main/java/org/apache/flume/clients/log4jappender/Log4jAppender.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-clients/flume-ng-log4jappender/pom.xml
+ 
+*****************************************************
+ Printing headers for files without AL header...
+ 
+ 

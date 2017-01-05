@@ -1,0 +1,66 @@
+
+*****************************************************
+Summary
+-------
+Generated at: 2017-01-05T18:38:59+08:00
+Notes: 4
+Binaries: 7
+Archives: 0
+Standards: 18
+
+Apache Licensed: 18
+Generated Documents: 0
+
+JavaDocs are generated and so license header is optional
+Generated files do not required license headers
+
+0 Unknown Licenses
+
+*******************************
+
+Unapproved licenses:
+
+
+*******************************
+
+Archives:
+
+*****************************************************
+  Files with Apache License headers will be marked AL
+  Binary files (which do not require AL headers) will be marked B
+  Compressed archives will be marked A
+  Notices, licenses etc will be marked N
+  AL    pom.xml_bak
+  AL    conf/flume-env.ps1.template
+  AL    conf/flume-env.sh.template
+  AL    conf/flume-conf.properties.template
+  AL    conf/log4j.properties
+  AL    doap_Flume.rdf
+  AL    README.md
+  AL    DEVNOTES
+  N     RELEASE-NOTES
+  AL    flume-ng-doc/sphinx/FlumeDeveloperGuide.rst
+  AL    flume-ng-doc/sphinx/FlumeUserGuide.rst
+  B     flume-ng-doc/sphinx/images/flume-logo.png
+  B     flume-ng-doc/sphinx/images/DevGuide_image01.png
+  B     flume-ng-doc/sphinx/images/UserGuide_image01.png
+  B     flume-ng-doc/sphinx/images/UserGuide_image00.png
+  B     flume-ng-doc/sphinx/images/UserGuide_image02.png
+  B     flume-ng-doc/sphinx/images/UserGuide_image03.png
+  B     flume-ng-doc/sphinx/images/DevGuide_image00.png
+  AL    flume-ng-doc/sphinx/conf.py
+  AL    flume-ng-doc/sphinx/index.rst
+  AL    flume-ng-doc/site.xml
+  N     NOTICE
+  AL    pom.xml
+  AL    dev-support/test-patch.py
+  AL    bin/flume-ng.ps1
+  AL    bin/flume-ng
+  AL    bin/flume-ng.cmd
+  N     CHANGELOG
+  N     LICENSE
+ 
+*****************************************************
+ Printing headers for files without AL header...
+ 
+ 

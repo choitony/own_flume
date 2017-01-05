@@ -1,0 +1,60 @@
+
+*****************************************************
+Summary
+-------
+Generated at: 2017-01-05T18:39:04+08:00
+Notes: 0
+Binaries: 0
+Archives: 0
+Standards: 23
+
+Apache Licensed: 23
+Generated Documents: 0
+
+JavaDocs are generated and so license header is optional
+Generated files do not required license headers
+
+0 Unknown Licenses
+
+*******************************
+
+Unapproved licenses:
+
+
+*******************************
+
+Archives:
+
+*****************************************************
+  Files with Apache License headers will be marked AL
+  Binary files (which do not require AL headers) will be marked B
+  Compressed archives will be marked A
+  Notices, licenses etc will be marked N
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-configuration/src/test/java/org/apache/flume/conf/source/TestSourceConfiguration.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-configuration/src/test/java/org/apache/flume/conf/TestFlumeConfiguration.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-configuration/src/main/java/org/apache/flume/conf/source/SourceConfiguration.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-configuration/src/main/java/org/apache/flume/conf/source/SourceType.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-configuration/src/main/java/org/apache/flume/conf/FlumeConfigurationErrorType.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-configuration/src/main/java/org/apache/flume/conf/sink/SinkProcessorType.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-configuration/src/main/java/org/apache/flume/conf/sink/SinkType.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-configuration/src/main/java/org/apache/flume/conf/sink/SinkGroupConfiguration.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-configuration/src/main/java/org/apache/flume/conf/sink/SinkProcessorConfiguration.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-configuration/src/main/java/org/apache/flume/conf/sink/SinkConfiguration.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-configuration/src/main/java/org/apache/flume/conf/channel/ChannelSelectorConfiguration.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-configuration/src/main/java/org/apache/flume/conf/channel/ChannelType.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-configuration/src/main/java/org/apache/flume/conf/channel/ChannelSelectorType.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-configuration/src/main/java/org/apache/flume/conf/channel/ChannelConfiguration.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-configuration/src/main/java/org/apache/flume/conf/BasicConfigurationConstants.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-configuration/src/main/java/org/apache/flume/conf/LogPrivacyUtil.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-configuration/src/main/java/org/apache/flume/conf/ComponentConfigurationFactory.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-configuration/src/main/java/org/apache/flume/conf/FlumeConfiguration.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-configuration/src/main/java/org/apache/flume/conf/ComponentConfiguration.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-configuration/src/main/java/org/apache/flume/conf/FlumeConfigurationError.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-configuration/src/main/java/org/apache/flume/conf/ConfigurationException.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-configuration/src/main/java/org/apache/flume/Context.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-configuration/pom.xml
+ 
+*****************************************************
+ Printing headers for files without AL header...
+ 
+ 

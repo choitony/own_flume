@@ -1,0 +1,49 @@
+
+*****************************************************
+Summary
+-------
+Generated at: 2017-01-05T18:39:08+08:00
+Notes: 0
+Binaries: 0
+Archives: 0
+Standards: 12
+
+Apache Licensed: 12
+Generated Documents: 0
+
+JavaDocs are generated and so license header is optional
+Generated files do not required license headers
+
+0 Unknown Licenses
+
+*******************************
+
+Unapproved licenses:
+
+
+*******************************
+
+Archives:
+
+*****************************************************
+  Files with Apache License headers will be marked AL
+  Binary files (which do not require AL headers) will be marked B
+  Compressed archives will be marked A
+  Notices, licenses etc will be marked N
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-auth/src/test/java/org/apache/flume/auth/TestFlumeAuthenticator.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-auth/src/main/java/org/apache/flume/auth/SecurityException.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-auth/src/main/java/org/apache/flume/auth/SimpleAuthenticator.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-auth/src/main/java/org/apache/flume/auth/PrivilegedExecutor.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-auth/src/main/java/org/apache/flume/auth/UGIExecutor.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-auth/src/main/java/org/apache/flume/auth/KerberosAuthenticator.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-auth/src/main/java/org/apache/flume/auth/FlumeAuthenticator.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-auth/src/main/java/org/apache/flume/auth/FlumeAuthenticationUtil.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-auth/src/main/java/org/apache/flume/auth/KerberosUser.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-auth/src/main/java/org/apache/flume/api/SecureRpcClientFactory.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-auth/src/main/java/org/apache/flume/api/SecureThriftRpcClient.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-auth/pom.xml
+ 
+*****************************************************
+ Printing headers for files without AL header...
+ 
+ 

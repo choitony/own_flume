@@ -1,0 +1,71 @@
+
+*****************************************************
+Summary
+-------
+Generated at: 2017-01-05T18:39:03+08:00
+Notes: 0
+Binaries: 0
+Archives: 0
+Standards: 34
+
+Apache Licensed: 34
+Generated Documents: 0
+
+JavaDocs are generated and so license header is optional
+Generated files do not required license headers
+
+0 Unknown Licenses
+
+*******************************
+
+Unapproved licenses:
+
+
+*******************************
+
+Archives:
+
+*****************************************************
+  Files with Apache License headers will be marked AL
+  Binary files (which do not require AL headers) will be marked B
+  Compressed archives will be marked A
+  Notices, licenses etc will be marked N
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sdk/src/test/java/org/apache/flume/event/TestEventBuilder.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sdk/src/test/java/org/apache/flume/api/TestNettyAvroRpcClient.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sdk/src/test/java/org/apache/flume/api/TestRpcClientFactory.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sdk/src/test/java/org/apache/flume/api/TestLoadBalancingRpcClient.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sdk/src/test/java/org/apache/flume/api/RpcTestUtils.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sdk/src/test/java/org/apache/flume/api/TestFailoverRpcClient.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sdk/src/test/java/org/apache/flume/api/ThriftTestingSource.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sdk/src/test/java/org/apache/flume/api/TestThriftRpcClient.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sdk/src/main/avro/flume.avdl
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sdk/src/main/java/org/apache/flume/event/JSONEvent.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sdk/src/main/java/org/apache/flume/event/SimpleEvent.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sdk/src/main/java/org/apache/flume/event/EventBuilder.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sdk/src/main/java/org/apache/flume/util/SpecificOrderIterator.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sdk/src/main/java/org/apache/flume/util/OrderSelector.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sdk/src/main/java/org/apache/flume/util/RoundRobinOrderSelector.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sdk/src/main/java/org/apache/flume/util/RandomOrderSelector.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sdk/src/main/java/org/apache/flume/EventDeliveryException.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sdk/src/main/java/org/apache/flume/Event.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sdk/src/main/java/org/apache/flume/FlumeException.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sdk/src/main/java/org/apache/flume/api/NettyAvroRpcClient.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sdk/src/main/java/org/apache/flume/api/ThriftRpcClient.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sdk/src/main/java/org/apache/flume/api/RpcClientConfigurationConstants.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sdk/src/main/java/org/apache/flume/api/LoadBalancingRpcClient.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sdk/src/main/java/org/apache/flume/api/RpcClientFactory.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sdk/src/main/java/org/apache/flume/api/FailoverRpcClient.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sdk/src/main/java/org/apache/flume/api/AbstractRpcClient.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sdk/src/main/java/org/apache/flume/api/RpcClient.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sdk/src/main/java/org/apache/flume/api/HostInfo.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sdk/src/main/java/org/apache/flume/thrift/ThriftSourceProtocol.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sdk/src/main/java/org/apache/flume/thrift/Status.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sdk/src/main/java/org/apache/flume/thrift/ThriftFlumeEvent.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sdk/src/main/thrift/flume.thrift
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sdk/src/main/thrift/aslv2
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sdk/pom.xml
+ 
+*****************************************************
+ Printing headers for files without AL header...
+ 
+ 
