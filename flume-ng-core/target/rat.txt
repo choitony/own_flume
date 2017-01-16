@@ -2,24 +2,25 @@
 *****************************************************
 Summary
 -------
-Generated at: 2017-01-05T18:39:11+08:00
+Generated at: 2017-01-16T12:18:22+08:00
 Notes: 0
 Binaries: 0
 Archives: 0
-Standards: 247
+Standards: 172
 
-Apache Licensed: 247
+Apache Licensed: 171
 Generated Documents: 0
 
 JavaDocs are generated and so license header is optional
 Generated files do not required license headers
 
-0 Unknown Licenses
+1 Unknown Licenses
 
 *******************************
 
 Unapproved licenses:
 
+  src/main/java/org/apache/flume/source/SpoolDireactoryUtilConstants.java
 
 *******************************
 
@@ -30,255 +31,220 @@ Archives:
   Binary files (which do not require AL headers) will be marked B
   Compressed archives will be marked A
   Notices, licenses etc will be marked N
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/scripts/saveVersion.ps1
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/scripts/saveVersion.sh
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/source/TestThriftSource.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/source/http/TestJSONHandler.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/source/http/TestBLOBHandler.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/source/http/TestHTTPSource.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/source/http/FlumeHttpServletRequestWrapper.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/source/TestMultiportSyslogTCPSource.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/source/TestSyslogUdpSource.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/source/TestBasicSourceSemantics.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/source/TestDefaultSourceFactory.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/source/TestSyslogTcpSource.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/source/TestAbstractPollableSource.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/source/TestSyslogUtils.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/source/MockSource.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/source/TestPollableSourceRunner.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/source/TestAvroSource.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/source/TestNetcatSource.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/source/TestStressSource.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/source/TestSpoolDirectorySource.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/source/TestSequenceGeneratorSource.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/source/TestSyslogParser.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/source/TestExecSource.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/TestContext.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/event/TestEventHelper.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/lifecycle/TestLifecycleSupervisor.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/lifecycle/TestLifecycleController.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/tools/TestTimestampRoundDownUtil.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/tools/TestVersionInfo.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/sink/TestThriftSink.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/sink/TestAvroSink.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/sink/TestDefaultSinkFactory.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/sink/TestFailoverSinkProcessor.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/sink/FixedOrderSelector.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/sink/TestLoggerSink.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/sink/TestLoadBalancingSinkProcessor.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/sink/SinkProcessorFactoryTest.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/sink/TestRollingFileSink.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/channel/TestMemoryChannelTransaction.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/channel/MockChannel.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/channel/TestMultiplexingChannelSelector.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/channel/TestReplicatingChannelSelector.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/channel/TestChannelUtils.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/channel/TestBasicChannelSemantics.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/channel/TestMemoryChannelConcurrency.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/channel/TestChannelProcessor.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/channel/TestMemoryChannel.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/channel/AbstractBasicChannelSemanticsTest.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/channel/MockEvent.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/instrumentation/http/TestHTTPMetricsServer.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/instrumentation/kafka/KafkaSourceCounterTest.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/instrumentation/util/TestJMXPollUtil.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/instrumentation/util/JMXTestUtils.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/instrumentation/TestMonitoredCounterGroup.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/serialization/TransientPositionTracker.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/serialization/TestResettableFileInputStream.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/serialization/TestDurablePositionTracker.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/serialization/ResettableTestStringInputStream.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/serialization/TestAvroEventDeserializer.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/serialization/TestHeaderAndBodyTextEventSerializer.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/serialization/TestLineDeserializer.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/serialization/TestBodyTextEventSerializer.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/serialization/SyslogAvroEventSerializer.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/serialization/TestFlumeEventAvroEventSerializer.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/serialization/TestSyslogAvroEventSerializer.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/client/avro/TestSpoolingFileLineReader.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/client/avro/TestReliableSpoolingFileEventReader.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/client/avro/TestBufferedLineReader.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/TestCounterGroup.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/interceptor/TestCensoringInterceptor.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/interceptor/TestRegexFilteringInterceptor.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/interceptor/TestStaticInterceptor.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/interceptor/CensoringInterceptor.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/interceptor/TestRegexExtractorInterceptor.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/interceptor/TestTimestampInterceptor.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/interceptor/TestHostInterceptor.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/interceptor/TestRegexExtractorInterceptorMillisSerializer.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/interceptor/TestRegexExtractorInterceptorPassThroughSerializer.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/interceptor/TestSearchAndReplaceInterceptor.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/test/java/org/apache/flume/formatter/output/TestBucketPath.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/conf/ConfigurableComponent.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/conf/Configurables.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/conf/Configurable.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/source/AbstractEventDrivenSource.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/source/AbstractSource.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/source/ExecSource.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/source/http/HTTPBadRequestException.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/source/http/HTTPSourceConfigurationConstants.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/source/http/JSONHandler.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/source/http/HTTPSourceHandler.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/source/http/HTTPSource.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/source/http/BLOBHandler.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/source/PollableSourceConstants.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/source/ExecSourceConfigurationConstants.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/source/SyslogParser.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/source/StressSource.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/source/SpoolDirectorySource.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/source/MultiportSyslogTCPSource.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/source/SyslogUDPSource.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/source/ThriftSource.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/source/BasicSourceSemantics.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/source/SyslogUtils.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/source/SequenceGeneratorSource.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/source/SyslogTcpSource.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/source/NetcatSource.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/source/AbstractPollableSource.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/source/NetcatSourceConfigurationConstants.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/source/AvroSource.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/source/SyslogSourceConfigurationConstants.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/source/PollableSourceRunner.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/source/EventDrivenSourceRunner.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/source/DefaultSourceFactory.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/source/SpoolDirectorySourceConfigurationConstants.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/event/EventHelper.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/lifecycle/LifecycleException.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/lifecycle/LifecycleController.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/lifecycle/LifecycleState.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/lifecycle/LifecycleAware.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/lifecycle/LifecycleSupervisor.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/SourceRunner.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/ChannelFullException.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/Channel.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/SinkFactory.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/tools/TimestampRoundDownUtil.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/tools/VersionInfo.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/tools/DirectMemoryUtils.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/tools/GetJavaProperty.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/tools/HTTPServerConstraintUtil.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/tools/PlatformDetect.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/VersionAnnotation.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/sink/AvroSink.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/sink/SinkGroup.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/sink/RollingFileSink.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/sink/ThriftSink.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/sink/DefaultSinkFactory.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/sink/FailoverSinkProcessor.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/sink/LoggerSink.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/sink/SinkProcessorFactory.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/sink/LoadBalancingSinkProcessor.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/sink/AbstractSinkSelector.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/sink/DefaultSinkProcessor.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/sink/AbstractRpcSink.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/sink/AbstractSink.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/sink/NullSink.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/sink/AbstractSinkProcessor.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/channel/ChannelUtils.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/channel/ChannelProcessor.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/channel/ChannelSelectorFactory.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/channel/MultiplexingChannelSelector.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/channel/DefaultChannelFactory.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/channel/BasicChannelSemantics.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/channel/AbstractChannel.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/channel/AbstractChannelSelector.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/channel/ReplicatingChannelSelector.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/channel/MemoryChannel.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/channel/BasicTransactionSemantics.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/channel/PseudoTxnMemoryChannel.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/EventDrivenSource.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/Transaction.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/instrumentation/http/HTTPMetricsServer.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/instrumentation/kafka/KafkaSourceCounterMBean.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/instrumentation/kafka/KafkaSinkCounterMBean.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/instrumentation/kafka/KafkaSourceCounter.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/instrumentation/kafka/KafkaSinkCounter.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/instrumentation/kafka/KafkaChannelCounterMBean.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/instrumentation/kafka/KafkaChannelCounter.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/instrumentation/util/JMXPollUtil.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/instrumentation/MonitoringType.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/instrumentation/ChannelProcessorCounter.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/instrumentation/SourceCounter.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/instrumentation/MonitorService.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/instrumentation/SinkCounterMBean.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/instrumentation/GangliaServer.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/instrumentation/MonitoredCounterGroup.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/instrumentation/ChannelCounterMBean.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/instrumentation/SinkCounter.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/instrumentation/SinkProcessorCounter.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/instrumentation/ChannelCounter.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/instrumentation/SourceCounterMBean.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/CounterGroup.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/ChannelSelector.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/ChannelFactory.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/serialization/LengthMeasurable.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/serialization/EventDeserializerFactory.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/serialization/HeaderAndBodyTextEventSerializer.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/serialization/AbstractAvroEventSerializer.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/serialization/DurablePositionTracker.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/serialization/BodyTextEventSerializer.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/serialization/EventSerializerType.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/serialization/FlumeEventAvroEventSerializer.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/serialization/EventSerDe.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/serialization/Resettable.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/serialization/AvroEventDeserializer.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/serialization/ResettableFileInputStream.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/serialization/AvroEventSerializerConfigurationConstants.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/serialization/EventSerializerFactory.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/serialization/DecodeErrorPolicy.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/serialization/Seekable.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/serialization/LineDeserializer.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/serialization/EventDeserializer.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/serialization/PositionTracker.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/serialization/ResettableInputStream.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/serialization/EventSerializer.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/serialization/RemoteMarkable.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/serialization/EventDeserializerType.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/client/avro/ReliableSpoolingFileEventReader.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/client/avro/AvroCLIClient.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/client/avro/EventReader.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/client/avro/ReliableEventReader.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/client/avro/SimpleTextLineEventReader.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/Clock.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/SinkRunner.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/PollableSource.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/SystemClock.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/annotations/InterfaceStability.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/annotations/Recyclable.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/annotations/InterfaceAudience.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/annotations/Disposable.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/Constants.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/Source.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/Sink.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/interceptor/StaticInterceptor.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/interceptor/SearchAndReplaceInterceptor.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/interceptor/InterceptorChain.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/interceptor/RegexExtractorInterceptorPassThroughSerializer.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/interceptor/TimestampInterceptor.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/interceptor/RegexExtractorInterceptorMillisSerializer.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/interceptor/Interceptor.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/interceptor/RegexFilteringInterceptor.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/interceptor/RegexExtractorInterceptor.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/interceptor/InterceptorBuilderFactory.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/interceptor/RegexExtractorInterceptorSerializer.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/interceptor/HostInterceptor.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/interceptor/InterceptorType.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/ChannelException.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/SinkProcessor.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/NamedComponent.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/SourceFactory.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/formatter/output/EventFormatter.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/formatter/output/DefaultPathManager.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/formatter/output/PathManagerFactory.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/formatter/output/BucketPath.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/formatter/output/PathManagerType.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/formatter/output/TextDelimitedOutputFormatter.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/formatter/output/RollTimePathManager.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/src/main/java/org/apache/flume/formatter/output/PathManager.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-core/pom.xml
+  AL    scripts/saveVersion.ps1
+  AL    scripts/saveVersion.sh
+  AL    pom.xml_1.6
+  AL    src/main/java/org/apache/flume/conf/ConfigurableComponent.java
+  AL    src/main/java/org/apache/flume/conf/Configurables.java
+  AL    src/main/java/org/apache/flume/conf/Configurable.java
+  AL    src/main/java/org/apache/flume/source/AbstractEventDrivenSource.java
+  AL    src/main/java/org/apache/flume/source/AbstractSource.java
+  AL    src/main/java/org/apache/flume/source/ExecSource.java
+  AL    src/main/java/org/apache/flume/source/http/HTTPBadRequestException.java
+  AL    src/main/java/org/apache/flume/source/http/HTTPSourceConfigurationConstants.java
+  AL    src/main/java/org/apache/flume/source/http/JSONHandler.java
+  AL    src/main/java/org/apache/flume/source/http/HTTPSourceHandler.java
+  AL    src/main/java/org/apache/flume/source/http/HTTPSource.java
+  AL    src/main/java/org/apache/flume/source/http/BLOBHandler.java
+  AL    src/main/java/org/apache/flume/source/PollableSourceConstants.java
+  AL    src/main/java/org/apache/flume/source/ExecSourceConfigurationConstants.java
+  AL    src/main/java/org/apache/flume/source/SyslogParser.java
+  AL    src/main/java/org/apache/flume/source/StressSource.java
+  AL    src/main/java/org/apache/flume/source/SpoolDirectorySource.java
+  AL    src/main/java/org/apache/flume/source/MultiportSyslogTCPSource.java
+ !????? src/main/java/org/apache/flume/source/SpoolDireactoryUtilConstants.java
+  AL    src/main/java/org/apache/flume/source/SyslogUDPSource.java
+  AL    src/main/java/org/apache/flume/source/ThriftSource.java
+  AL    src/main/java/org/apache/flume/source/BasicSourceSemantics.java
+  AL    src/main/java/org/apache/flume/source/SyslogUtils.java
+  AL    src/main/java/org/apache/flume/source/SequenceGeneratorSource.java
+  AL    src/main/java/org/apache/flume/source/SyslogTcpSource.java
+  AL    src/main/java/org/apache/flume/source/NetcatSource.java
+  AL    src/main/java/org/apache/flume/source/AbstractPollableSource.java
+  AL    src/main/java/org/apache/flume/source/NetcatSourceConfigurationConstants.java
+  AL    src/main/java/org/apache/flume/source/AvroSource.java
+  AL    src/main/java/org/apache/flume/source/SyslogSourceConfigurationConstants.java
+  AL    src/main/java/org/apache/flume/source/PollableSourceRunner.java
+  AL    src/main/java/org/apache/flume/source/EventDrivenSourceRunner.java
+  AL    src/main/java/org/apache/flume/source/DefaultSourceFactory.java
+  AL    src/main/java/org/apache/flume/source/SpoolDirectorySourceConfigurationConstants.java
+  AL    src/main/java/org/apache/flume/event/EventHelper.java
+  AL    src/main/java/org/apache/flume/lifecycle/LifecycleException.java
+  AL    src/main/java/org/apache/flume/lifecycle/LifecycleController.java
+  AL    src/main/java/org/apache/flume/lifecycle/LifecycleState.java
+  AL    src/main/java/org/apache/flume/lifecycle/LifecycleAware.java
+  AL    src/main/java/org/apache/flume/lifecycle/LifecycleSupervisor.java
+  AL    src/main/java/org/apache/flume/SourceRunner.java
+  AL    src/main/java/org/apache/flume/ChannelFullException.java
+  AL    src/main/java/org/apache/flume/Channel.java
+  AL    src/main/java/org/apache/flume/SinkFactory.java
+  AL    src/main/java/org/apache/flume/tools/TimestampRoundDownUtil.java
+  AL    src/main/java/org/apache/flume/tools/VersionInfo.java
+  AL    src/main/java/org/apache/flume/tools/DirectMemoryUtils.java
+  AL    src/main/java/org/apache/flume/tools/GetJavaProperty.java
+  AL    src/main/java/org/apache/flume/tools/HTTPServerConstraintUtil.java
+  AL    src/main/java/org/apache/flume/tools/PlatformDetect.java
+  AL    src/main/java/org/apache/flume/VersionAnnotation.java
+  AL    src/main/java/org/apache/flume/sink/AvroSink.java
+  AL    src/main/java/org/apache/flume/sink/SinkGroup.java
+  AL    src/main/java/org/apache/flume/sink/RollingFileSink.java
+  AL    src/main/java/org/apache/flume/sink/ThriftSink.java
+  AL    src/main/java/org/apache/flume/sink/DefaultSinkFactory.java
+  AL    src/main/java/org/apache/flume/sink/FailoverSinkProcessor.java
+  AL    src/main/java/org/apache/flume/sink/LoggerSink.java
+  AL    src/main/java/org/apache/flume/sink/SinkProcessorFactory.java
+  AL    src/main/java/org/apache/flume/sink/LoadBalancingSinkProcessor.java
+  AL    src/main/java/org/apache/flume/sink/AbstractSinkSelector.java
+  AL    src/main/java/org/apache/flume/sink/DefaultSinkProcessor.java
+  AL    src/main/java/org/apache/flume/sink/AbstractRpcSink.java
+  AL    src/main/java/org/apache/flume/sink/AbstractSink.java
+  AL    src/main/java/org/apache/flume/sink/NullSink.java
+  AL    src/main/java/org/apache/flume/sink/AbstractSinkProcessor.java
+  AL    src/main/java/org/apache/flume/channel/ChannelUtils.java
+  AL    src/main/java/org/apache/flume/channel/ChannelProcessor.java
+  AL    src/main/java/org/apache/flume/channel/ChannelSelectorFactory.java
+  AL    src/main/java/org/apache/flume/channel/MultiplexingChannelSelector.java
+  AL    src/main/java/org/apache/flume/channel/DefaultChannelFactory.java
+  AL    src/main/java/org/apache/flume/channel/BasicChannelSemantics.java
+  AL    src/main/java/org/apache/flume/channel/AbstractChannel.java
+  AL    src/main/java/org/apache/flume/channel/AbstractChannelSelector.java
+  AL    src/main/java/org/apache/flume/channel/ReplicatingChannelSelector.java
+  AL    src/main/java/org/apache/flume/channel/MemoryChannel.java
+  AL    src/main/java/org/apache/flume/channel/BasicTransactionSemantics.java
+  AL    src/main/java/org/apache/flume/channel/PseudoTxnMemoryChannel.java
+  AL    src/main/java/org/apache/flume/EventDrivenSource.java
+  AL    src/main/java/org/apache/flume/Transaction.java
+  AL    src/main/java/org/apache/flume/instrumentation/http/HTTPMetricsServer.java
+  AL    src/main/java/org/apache/flume/instrumentation/kafka/KafkaSourceCounterMBean.java
+  AL    src/main/java/org/apache/flume/instrumentation/kafka/KafkaSinkCounterMBean.java
+  AL    src/main/java/org/apache/flume/instrumentation/kafka/KafkaSourceCounter.java
+  AL    src/main/java/org/apache/flume/instrumentation/kafka/KafkaSinkCounter.java
+  AL    src/main/java/org/apache/flume/instrumentation/kafka/KafkaChannelCounterMBean.java
+  AL    src/main/java/org/apache/flume/instrumentation/kafka/KafkaChannelCounter.java
+  AL    src/main/java/org/apache/flume/instrumentation/util/JMXPollUtil.java
+  AL    src/main/java/org/apache/flume/instrumentation/MonitoringType.java
+  AL    src/main/java/org/apache/flume/instrumentation/ChannelProcessorCounter.java
+  AL    src/main/java/org/apache/flume/instrumentation/SourceCounter.java
+  AL    src/main/java/org/apache/flume/instrumentation/MonitorService.java
+  AL    src/main/java/org/apache/flume/instrumentation/SinkCounterMBean.java
+  AL    src/main/java/org/apache/flume/instrumentation/GangliaServer.java
+  AL    src/main/java/org/apache/flume/instrumentation/MonitoredCounterGroup.java
+  AL    src/main/java/org/apache/flume/instrumentation/ChannelCounterMBean.java
+  AL    src/main/java/org/apache/flume/instrumentation/SinkCounter.java
+  AL    src/main/java/org/apache/flume/instrumentation/SinkProcessorCounter.java
+  AL    src/main/java/org/apache/flume/instrumentation/ChannelCounter.java
+  AL    src/main/java/org/apache/flume/instrumentation/SourceCounterMBean.java
+  AL    src/main/java/org/apache/flume/CounterGroup.java
+  AL    src/main/java/org/apache/flume/ChannelSelector.java
+  AL    src/main/java/org/apache/flume/ChannelFactory.java
+  AL    src/main/java/org/apache/flume/serialization/LengthMeasurable.java
+  AL    src/main/java/org/apache/flume/serialization/EventDeserializerFactory.java
+  AL    src/main/java/org/apache/flume/serialization/HeaderAndBodyTextEventSerializer.java
+  AL    src/main/java/org/apache/flume/serialization/AbstractAvroEventSerializer.java
+  AL    src/main/java/org/apache/flume/serialization/DurablePositionTracker.java
+  AL    src/main/java/org/apache/flume/serialization/BodyTextEventSerializer.java
+  AL    src/main/java/org/apache/flume/serialization/EventSerializerType.java
+  AL    src/main/java/org/apache/flume/serialization/FlumeEventAvroEventSerializer.java
+  AL    src/main/java/org/apache/flume/serialization/EventSerDe.java
+  AL    src/main/java/org/apache/flume/serialization/Resettable.java
+  AL    src/main/java/org/apache/flume/serialization/AvroEventDeserializer.java
+  AL    src/main/java/org/apache/flume/serialization/ResettableFileInputStream.java
+  AL    src/main/java/org/apache/flume/serialization/AvroEventSerializerConfigurationConstants.java
+  AL    src/main/java/org/apache/flume/serialization/EventSerializerFactory.java
+  AL    src/main/java/org/apache/flume/serialization/DecodeErrorPolicy.java
+  AL    src/main/java/org/apache/flume/serialization/Seekable.java
+  AL    src/main/java/org/apache/flume/serialization/LineDeserializer.java
+  AL    src/main/java/org/apache/flume/serialization/EventDeserializer.java
+  AL    src/main/java/org/apache/flume/serialization/PositionTracker.java
+  AL    src/main/java/org/apache/flume/serialization/ResettableInputStream.java
+  AL    src/main/java/org/apache/flume/serialization/EventSerializer.java
+  AL    src/main/java/org/apache/flume/serialization/RemoteMarkable.java
+  AL    src/main/java/org/apache/flume/serialization/EventDeserializerType.java
+  AL    src/main/java/org/apache/flume/client/avro/ReliableSpoolingFileEventReader.java
+  AL    src/main/java/org/apache/flume/client/avro/AvroCLIClient.java
+  AL    src/main/java/org/apache/flume/client/avro/EventReader.java
+  AL    src/main/java/org/apache/flume/client/avro/ReliableEventReader.java
+  AL    src/main/java/org/apache/flume/client/avro/ReliableSpoolingFileEventReader.java_20161020
+  AL    src/main/java/org/apache/flume/client/avro/SimpleTextLineEventReader.java
+  AL    src/main/java/org/apache/flume/Clock.java
+  AL    src/main/java/org/apache/flume/SinkRunner.java
+  AL    src/main/java/org/apache/flume/PollableSource.java
+  AL    src/main/java/org/apache/flume/SystemClock.java
+  AL    src/main/java/org/apache/flume/annotations/InterfaceStability.java
+  AL    src/main/java/org/apache/flume/annotations/Recyclable.java
+  AL    src/main/java/org/apache/flume/annotations/InterfaceAudience.java
+  AL    src/main/java/org/apache/flume/annotations/Disposable.java
+  AL    src/main/java/org/apache/flume/Constants.java
+  AL    src/main/java/org/apache/flume/Source.java
+  AL    src/main/java/org/apache/flume/Sink.java
+  AL    src/main/java/org/apache/flume/interceptor/StaticInterceptor.java
+  AL    src/main/java/org/apache/flume/interceptor/SearchAndReplaceInterceptor.java
+  AL    src/main/java/org/apache/flume/interceptor/InterceptorChain.java
+  AL    src/main/java/org/apache/flume/interceptor/RegexExtractorInterceptorPassThroughSerializer.java
+  AL    src/main/java/org/apache/flume/interceptor/TimestampInterceptor.java
+  AL    src/main/java/org/apache/flume/interceptor/RegexExtractorInterceptorMillisSerializer.java
+  AL    src/main/java/org/apache/flume/interceptor/Interceptor.java
+  AL    src/main/java/org/apache/flume/interceptor/RegexFilteringInterceptor.java
+  AL    src/main/java/org/apache/flume/interceptor/RegexExtractorInterceptor.java
+  AL    src/main/java/org/apache/flume/interceptor/InterceptorBuilderFactory.java
+  AL    src/main/java/org/apache/flume/interceptor/RegexExtractorInterceptorSerializer.java
+  AL    src/main/java/org/apache/flume/interceptor/HostInterceptor.java
+  AL    src/main/java/org/apache/flume/interceptor/InterceptorType.java
+  AL    src/main/java/org/apache/flume/ChannelException.java
+  AL    src/main/java/org/apache/flume/SinkProcessor.java
+  AL    src/main/java/org/apache/flume/NamedComponent.java
+  AL    src/main/java/org/apache/flume/SourceFactory.java
+  AL    src/main/java/org/apache/flume/formatter/output/EventFormatter.java
+  AL    src/main/java/org/apache/flume/formatter/output/DefaultPathManager.java
+  AL    src/main/java/org/apache/flume/formatter/output/PathManagerFactory.java
+  AL    src/main/java/org/apache/flume/formatter/output/BucketPath.java
+  AL    src/main/java/org/apache/flume/formatter/output/PathManagerType.java
+  AL    src/main/java/org/apache/flume/formatter/output/TextDelimitedOutputFormatter.java
+  AL    src/main/java/org/apache/flume/formatter/output/RollTimePathManager.java
+  AL    src/main/java/org/apache/flume/formatter/output/PathManager.java
+  AL    pom.xml
  
 *****************************************************
  Printing headers for files without AL header...
  
  
+=======================================================================
+==src/main/java/org/apache/flume/source/SpoolDireactoryUtilConstants.java
+=======================================================================
+package org.apache.flume.source;
+
+public class SpoolDireactoryUtilConstants {
+
+	public static final String PROPERTY_PREFIX = "kafka.";
+
+	  /* Properties */
+
+	  public static final String TOPIC = "topic";
+	  public static final String BATCH_SIZE = "batchSize";
+	  public static final String BROKER_LIST_KEY = "bootstrap.servers";
+	  public static final String REQUIRED_ACKS_KEY = "request.required.acks";
+	  public static final String BROKER_LIST_FLUME_KEY = "brokerList";
+	  public static final String REQUIRED_ACKS_FLUME_KEY = "requiredAcks";
+	  public static final String JAVA_AUTHENTICATION_PATH = "jaasString";
+	  public static final String SECURITY_PROTOCAL = "securityProtocol";
+	  public static final String KEY_SERIALIZER = "key.serializer";
+	  public static final String VALUE_SERIALIZER = "value.serializer";
+	  public static final String KRB_CONF_PATH = "krbConfPath";
+	  public static final String THREADS = "threads";
+	  public static final String QUEUE_SIZE = "queue_size";
+	  public static final String THREADPOLL_TIMEOUT = "threadpoll_timeout_ms";
+	  
+	  
+	  
+	  public static final int DEFAULT_THREADS = 1;
+	  public static final long DEFAULT_THREADPOLL_TIMEOUT = 60 * 1000;
+	  public static final long DEFAULT_QUEUE_SIZE = 10000;
+	  public static final int DEFAULT_BATCH_SIZE = 100;
+	  public static final String DEFAULT_TOPIC = "default-flume-topic";
+	  public static final String DEFAULT_REQUIRED_ACKS = "1";
+	  public static final String DEFAULT_JAVA_AUTHENTICATION_PATH = "kafka_conf/kafka_client_jaas.conf";
+	  public static final String DEFAULT_VALUE_SERIALIZER = "org.apache.kafka.common.serialization.ByteArraySerializer";
+	  public static final String DEFAULT_KEY_SERIALIZER = "org.apache.kafka.common.serialization.StringSerializer";
+	  public static final String DEFAULT_KRB_CONF_PATH = "kafka_conf/krb5.conf";
+	  public static final String DEFAULT_SECURITY_PROTOCAL = "SASL_PLAINTEXT";
+}

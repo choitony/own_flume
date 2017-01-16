@@ -20,12 +20,8 @@ package org.apache.flume.source;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Preconditions;
 import com.google.common.base.Throwables;
-import org.apache.flume.ChannelException;
-import org.apache.flume.ChannelFullException;
-import org.apache.flume.Context;
-import org.apache.flume.Event;
-import org.apache.flume.EventDrivenSource;
-import org.apache.flume.FlumeException;
+
+import org.apache.flume.*;
 import org.apache.flume.client.avro.ReliableSpoolingFileEventReader;
 import org.apache.flume.conf.Configurable;
 import org.apache.flume.instrumentation.SourceCounter;
@@ -36,263 +32,238 @@ import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
+import java.util.Properties;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 import static org.apache.flume.source.SpoolDirectorySourceConfigurationConstants.*;
 
-public class SpoolDirectorySource extends AbstractSource
-    implements Configurable, EventDrivenSource {
+public class SpoolDirectorySource extends AbstractSource implements Configurable, EventDrivenSource {
 
-  private static final Logger logger = LoggerFactory.getLogger(SpoolDirectorySource.class);
+	private static final Logger logger = LoggerFactory.getLogger(SpoolDirectorySource.class);
 
-  /* Config options */
-  private String completedSuffix;
-  private String spoolDirectory;
-  private boolean fileHeader;
-  private String fileHeaderKey;
-  private boolean basenameHeader;
-  private String basenameHeaderKey;
-  private int batchSize;
-  private String includePattern;
-  private String ignorePattern;
-  private String trackerDirPath;
-  private String deserializerType;
-  private Context deserializerContext;
-  private String deletePolicy;
-  private String inputCharset;
-  private DecodeErrorPolicy decodeErrorPolicy;
-  private volatile boolean hasFatalError = false;
+	// Delay used when polling for new files
+	private static final int POLL_DELAY_MS = 500;
 
-  private SourceCounter sourceCounter;
-  ReliableSpoolingFileEventReader reader;
-  private ScheduledExecutorService executor;
-  private boolean backoff = true;
-  private boolean hitChannelException = false;
-  private boolean hitChannelFullException = false;
-  private int maxBackoff;
-  private ConsumeOrder consumeOrder;
-  private int pollDelay;
-  private boolean recursiveDirectorySearch;
+	/* Config options */
+	private String completedSuffix;
+	private String spoolDirectory;
+	private boolean fileHeader;
+	private String fileHeaderKey;
+	private boolean basenameHeader;
+	private String basenameHeaderKey;
+	private int batchSize;
+	private String ignorePattern;
+	private String trackerDirPath;
+	private String deserializerType;
+	private Context deserializerContext;
+	private String deletePolicy;
+	private String inputCharset;
+	private DecodeErrorPolicy decodeErrorPolicy;
+	private volatile boolean hasFatalError = false;
 
-  @Override
-  public synchronized void start() {
-    logger.info("SpoolDirectorySource source starting with directory: {}",
-        spoolDirectory);
+	private SourceCounter sourceCounter;
+	ReliableSpoolingFileEventReader reader;
+	private ScheduledExecutorService executor;
+	private boolean backoff = true;
+	private boolean hitChannelException = false;
+	private int maxBackoff;
+	private ConsumeOrder consumeOrder;
 
-    executor = Executors.newSingleThreadScheduledExecutor();
+	private int threads;
 
-    File directory = new File(spoolDirectory);
-    try {
-      reader = new ReliableSpoolingFileEventReader.Builder()
-          .spoolDirectory(directory)
-          .completedSuffix(completedSuffix)
-          .includePattern(includePattern)
-          .ignorePattern(ignorePattern)
-          .trackerDirPath(trackerDirPath)
-          .annotateFileName(fileHeader)
-          .fileNameHeader(fileHeaderKey)
-          .annotateBaseName(basenameHeader)
-          .baseNameHeader(basenameHeaderKey)
-          .deserializerType(deserializerType)
-          .deserializerContext(deserializerContext)
-          .deletePolicy(deletePolicy)
-          .inputCharset(inputCharset)
-          .decodeErrorPolicy(decodeErrorPolicy)
-          .consumeOrder(consumeOrder)
-          .recursiveDirectorySearch(recursiveDirectorySearch)
-          .build();
-    } catch (IOException ioe) {
-      throw new FlumeException("Error instantiating spooling event parser",
-          ioe);
-    }
+	private Integer channelLock = new Integer(1);
 
-    Runnable runner = new SpoolDirectoryRunnable(reader, sourceCounter);
-    executor.scheduleWithFixedDelay(
-        runner, 0, pollDelay, TimeUnit.MILLISECONDS);
+	@Override
+	public synchronized void start() {
+		logger.info("SpoolDirectorySource source starting with directory: {}", spoolDirectory);
 
-    super.start();
-    logger.debug("SpoolDirectorySource source started");
-    sourceCounter.start();
-  }
+		executor = Executors.newScheduledThreadPool(threads);
 
-  @Override
-  public synchronized void stop() {
-    executor.shutdown();
-    try {
-      executor.awaitTermination(10L, TimeUnit.SECONDS);
-    } catch (InterruptedException ex) {
-      logger.info("Interrupted while awaiting termination", ex);
-    }
-    executor.shutdownNow();
+		for (int threadId = 0; threadId < threads; threadId++) {
+			File directory = new File(spoolDirectory);
+			try {
+				reader = new ReliableSpoolingFileEventReader.Builder().spoolDirectory(directory)
+						.completedSuffix(completedSuffix).ignorePattern(ignorePattern).trackerDirPath(trackerDirPath)
+						.annotateFileName(fileHeader).fileNameHeader(fileHeaderKey).annotateBaseName(basenameHeader)
+						.baseNameHeader(basenameHeaderKey).deserializerType(deserializerType)
+						.deserializerContext(deserializerContext).deletePolicy(deletePolicy).inputCharset(inputCharset)
+						.decodeErrorPolicy(decodeErrorPolicy).consumeOrder(consumeOrder).threadId(threadId).build();
+			} catch (IOException ioe) {
+				logger.debug(" test new reader failed threadId = " + threadId + " " + ioe.toString());
+				throw new FlumeException("Error instantiating spooling event parser", ioe);
+			}
+			logger.debug(" test new reader success threadId = " + threadId);
+			Runnable runner = new SpoolDirectoryRunnable(reader, sourceCounter, threadId);
+			executor.submit(runner);
+		}
+		super.start();
+		logger.debug("SpoolDirectorySource source started");
+		sourceCounter.start();
+	}
 
-    super.stop();
-    sourceCounter.stop();
-    logger.info("SpoolDir source {} stopped. Metrics: {}", getName(), sourceCounter);
-  }
+	@Override
+	public synchronized void stop() {
+		executor.shutdown();
+		try {
+			executor.awaitTermination(10L, TimeUnit.SECONDS);
+		} catch (InterruptedException ex) {
+			logger.info("Interrupted while awaiting termination", ex);
+		}
+		executor.shutdownNow();
 
-  @Override
-  public String toString() {
-    return "Spool Directory source " + getName() +
-        ": { spoolDir: " + spoolDirectory + " }";
-  }
+		super.stop();
+		sourceCounter.stop();
+		logger.info("SpoolDir source {} stopped. Metrics: {}", getName(), sourceCounter);
+	}
 
-  @Override
-  public synchronized void configure(Context context) {
-    spoolDirectory = context.getString(SPOOL_DIRECTORY);
-    Preconditions.checkState(spoolDirectory != null,
-        "Configuration must specify a spooling directory");
+	@Override
+	public String toString() {
+		return "Spool Directory source " + getName() + ": { spoolDir: " + spoolDirectory + " }";
+	}
 
-    completedSuffix = context.getString(SPOOLED_FILE_SUFFIX,
-        DEFAULT_SPOOLED_FILE_SUFFIX);
-    deletePolicy = context.getString(DELETE_POLICY, DEFAULT_DELETE_POLICY);
-    fileHeader = context.getBoolean(FILENAME_HEADER,
-        DEFAULT_FILE_HEADER);
-    fileHeaderKey = context.getString(FILENAME_HEADER_KEY,
-        DEFAULT_FILENAME_HEADER_KEY);
-    basenameHeader = context.getBoolean(BASENAME_HEADER,
-        DEFAULT_BASENAME_HEADER);
-    basenameHeaderKey = context.getString(BASENAME_HEADER_KEY,
-        DEFAULT_BASENAME_HEADER_KEY);
-    batchSize = context.getInteger(BATCH_SIZE,
-        DEFAULT_BATCH_SIZE);
-    inputCharset = context.getString(INPUT_CHARSET, DEFAULT_INPUT_CHARSET);
-    decodeErrorPolicy = DecodeErrorPolicy.valueOf(
-        context.getString(DECODE_ERROR_POLICY, DEFAULT_DECODE_ERROR_POLICY)
-            .toUpperCase(Locale.ENGLISH));
+	@Override
+	public synchronized void configure(Context context) {
+		spoolDirectory = context.getString(SPOOL_DIRECTORY);
+		Preconditions.checkState(spoolDirectory != null, "Configuration must specify a spooling directory");
 
-    includePattern = context.getString(INCLUDE_PAT, DEFAULT_INCLUDE_PAT);
-    ignorePattern = context.getString(IGNORE_PAT, DEFAULT_IGNORE_PAT);
-    trackerDirPath = context.getString(TRACKER_DIR, DEFAULT_TRACKER_DIR);
+		completedSuffix = context.getString(SPOOLED_FILE_SUFFIX, DEFAULT_SPOOLED_FILE_SUFFIX);
+		deletePolicy = context.getString(DELETE_POLICY, DEFAULT_DELETE_POLICY);
+		fileHeader = context.getBoolean(FILENAME_HEADER, DEFAULT_FILE_HEADER);
+		fileHeaderKey = context.getString(FILENAME_HEADER_KEY, DEFAULT_FILENAME_HEADER_KEY);
+		basenameHeader = context.getBoolean(BASENAME_HEADER, DEFAULT_BASENAME_HEADER);
+		basenameHeaderKey = context.getString(BASENAME_HEADER_KEY, DEFAULT_BASENAME_HEADER_KEY);
+		batchSize = context.getInteger(BATCH_SIZE, DEFAULT_BATCH_SIZE);
+		inputCharset = context.getString(INPUT_CHARSET, DEFAULT_INPUT_CHARSET);
+		decodeErrorPolicy = DecodeErrorPolicy.valueOf(
+				context.getString(DECODE_ERROR_POLICY, DEFAULT_DECODE_ERROR_POLICY).toUpperCase(Locale.ENGLISH));
 
-    deserializerType = context.getString(DESERIALIZER, DEFAULT_DESERIALIZER);
-    deserializerContext = new Context(context.getSubProperties(DESERIALIZER +
-        "."));
+		ignorePattern = context.getString(IGNORE_PAT, DEFAULT_IGNORE_PAT);
+		trackerDirPath = context.getString(TRACKER_DIR, DEFAULT_TRACKER_DIR);
 
-    consumeOrder = ConsumeOrder.valueOf(context.getString(CONSUME_ORDER,
-        DEFAULT_CONSUME_ORDER.toString()).toUpperCase(Locale.ENGLISH));
+		deserializerType = context.getString(DESERIALIZER, DEFAULT_DESERIALIZER);
 
-    pollDelay = context.getInteger(POLL_DELAY, DEFAULT_POLL_DELAY);
+		deserializerContext = new Context(context.getSubProperties(DESERIALIZER + "."));
+		threads = context.getInteger(SpoolDireactoryUtilConstants.THREADS,
+				SpoolDireactoryUtilConstants.DEFAULT_THREADS);
 
-    recursiveDirectorySearch = context.getBoolean(RECURSIVE_DIRECTORY_SEARCH,
-        DEFAULT_RECURSIVE_DIRECTORY_SEARCH);
+		consumeOrder = ConsumeOrder.valueOf(
+				context.getString(CONSUME_ORDER, DEFAULT_CONSUME_ORDER.toString()).toUpperCase(Locale.ENGLISH));
 
-    // "Hack" to support backwards compatibility with previous generation of
-    // spooling directory source, which did not support deserializers
-    Integer bufferMaxLineLength = context.getInteger(BUFFER_MAX_LINE_LENGTH);
-    if (bufferMaxLineLength != null && deserializerType != null &&
-        deserializerType.equalsIgnoreCase(DEFAULT_DESERIALIZER)) {
-      deserializerContext.put(LineDeserializer.MAXLINE_KEY,
-          bufferMaxLineLength.toString());
-    }
+		// "Hack" to support backwards compatibility with previous generation of
+		// spooling directory source, which did not support deserializers
+		Integer bufferMaxLineLength = context.getInteger(BUFFER_MAX_LINE_LENGTH);
+		if (bufferMaxLineLength != null && deserializerType != null
+				&& deserializerType.equalsIgnoreCase(DEFAULT_DESERIALIZER)) {
+			deserializerContext.put(LineDeserializer.MAXLINE_KEY, bufferMaxLineLength.toString());
+		}
 
-    maxBackoff = context.getInteger(MAX_BACKOFF, DEFAULT_MAX_BACKOFF);
-    if (sourceCounter == null) {
-      sourceCounter = new SourceCounter(getName());
-    }
-  }
+		maxBackoff = context.getInteger(MAX_BACKOFF, DEFAULT_MAX_BACKOFF);
+		if (sourceCounter == null) {
+			sourceCounter = new SourceCounter(getName());
+		}
+	}
 
-  @VisibleForTesting
-  protected boolean hasFatalError() {
-    return hasFatalError;
-  }
+	@VisibleForTesting
+	protected boolean hasFatalError() {
+		return hasFatalError;
+	}
 
+	/**
+	 * The class always backs off, this exists only so that we can test without
+	 * taking a really long time.
+	 * 
+	 * @param backoff
+	 *            - whether the source should backoff if the channel is full
+	 */
+	@VisibleForTesting
+	protected void setBackOff(boolean backoff) {
+		this.backoff = backoff;
+	}
 
-  /**
-   * The class always backs off, this exists only so that we can test without
-   * taking a really long time.
-   *
-   * @param backoff - whether the source should backoff if the channel is full
-   */
-  @VisibleForTesting
-  protected void setBackOff(boolean backoff) {
-    this.backoff = backoff;
-  }
+	@VisibleForTesting
+	protected boolean hitChannelException() {
+		return hitChannelException;
+	}
 
-  @VisibleForTesting
-  protected boolean didHitChannelException() {
-    return hitChannelException;
-  }
+	@VisibleForTesting
+	protected SourceCounter getSourceCounter() {
+		return sourceCounter;
+	}
 
-  @VisibleForTesting
-  protected boolean didHitChannelFullException() {
-    return hitChannelFullException;
-  }
+	private class SpoolDirectoryRunnable implements Runnable {
+		private ReliableSpoolingFileEventReader reader;
+		private SourceCounter sourceCounter;
+		private int threadId;
+		List<Event> events = null;
 
-  @VisibleForTesting
-  protected SourceCounter getSourceCounter() {
-    return sourceCounter;
-  }
+		public SpoolDirectoryRunnable(ReliableSpoolingFileEventReader reader, SourceCounter sourceCounter,
+				int threadId) {
+			this.reader = reader;
+			this.sourceCounter = sourceCounter;
+			this.threadId = threadId;
+		}
 
-  @VisibleForTesting
-  protected boolean getRecursiveDirectorySearch() {
-    return recursiveDirectorySearch;
-  }
+		private void addEventBatchToChannel(List<Event> events) {
+			synchronized (channelLock) {
+				getChannelProcessor().processEventBatch(events);
+			}
+		}
 
-  private class SpoolDirectoryRunnable implements Runnable {
-    private ReliableSpoolingFileEventReader reader;
-    private SourceCounter sourceCounter;
+		@Override
+		public void run() {
+			int backoffInterval = 250;
+			try {
+				while (!Thread.interrupted()) {
+					long startTimes = System.currentTimeMillis();
+					if (events == null || events.isEmpty()) {
+						events = reader.readEvents(batchSize);
+					}
+					if (events == null || events.isEmpty()) {
+						try {
+							Thread.sleep(POLL_DELAY_MS);
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+						continue;
+					}
+					sourceCounter.addToEventReceivedCount(events.size());
+					sourceCounter.incrementAppendBatchReceivedCount();
 
-    public SpoolDirectoryRunnable(ReliableSpoolingFileEventReader reader,
-                                  SourceCounter sourceCounter) {
-      this.reader = reader;
-      this.sourceCounter = sourceCounter;
-    }
+					try {
+						addEventBatchToChannel(events);
+						reader.commit();
+					} catch (ChannelException ex) {
+						logger.warn("The channel is full, and cannot write data now. The "
+								+ "source will try again after " + String.valueOf(backoffInterval) + " milliseconds");
+						hitChannelException = true;
+						if (backoff) {
+							TimeUnit.MILLISECONDS.sleep(backoffInterval);
+							backoffInterval = backoffInterval << 1;
+							backoffInterval = backoffInterval >= maxBackoff ? maxBackoff : backoffInterval;
+						}
+						continue;
+					}
+					backoffInterval = 250;
+					sourceCounter.addToEventAcceptedCount(events.size());
+					sourceCounter.incrementAppendBatchAcceptedCount();
 
-    @Override
-    public void run() {
-      int backoffInterval = 250;
-      try {
-        while (!Thread.interrupted()) {
-          List<Event> events = reader.readEvents(batchSize);
-          if (events.isEmpty()) {
-            break;
-          }
-          sourceCounter.addToEventReceivedCount(events.size());
-          sourceCounter.incrementAppendBatchReceivedCount();
-
-          try {
-            getChannelProcessor().processEventBatch(events);
-            reader.commit();
-          } catch (ChannelFullException ex) {
-            logger.warn("The channel is full, and cannot write data now. The " +
-                "source will try again after " + backoffInterval +
-                " milliseconds");
-            hitChannelFullException = true;
-            backoffInterval = waitAndGetNewBackoffInterval(backoffInterval);
-            continue;
-          } catch (ChannelException ex) {
-            logger.warn("The channel threw an exception, and cannot write data now. The " +
-                "source will try again after " + backoffInterval +
-                " milliseconds");
-            hitChannelException = true;
-            backoffInterval = waitAndGetNewBackoffInterval(backoffInterval);
-            continue;
-          }
-          backoffInterval = 250;
-          sourceCounter.addToEventAcceptedCount(events.size());
-          sourceCounter.incrementAppendBatchAcceptedCount();
-        }
-      } catch (Throwable t) {
-        logger.error("FATAL: " + SpoolDirectorySource.this.toString() + ": " +
-            "Uncaught exception in SpoolDirectorySource thread. " +
-            "Restart or reconfigure Flume to continue processing.", t);
-        hasFatalError = true;
-        Throwables.propagate(t);
-      }
-    }
-
-    private int waitAndGetNewBackoffInterval(int backoffInterval) throws InterruptedException {
-      if (backoff) {
-        TimeUnit.MILLISECONDS.sleep(backoffInterval);
-        backoffInterval = backoffInterval << 1;
-        backoffInterval = backoffInterval >= maxBackoff ? maxBackoff :
-            backoffInterval;
-      }
-      return backoffInterval;
-    }
-  }
+					long endTimes = System.currentTimeMillis();
+					logger.info(" test thread " + threadId + "input a batch of: " + events.size() + " us: "
+							+ (endTimes - startTimes));
+					events = null;
+				}
+			} catch (Throwable t) {
+				logger.error("FATAL: " + SpoolDirectorySource.this.toString() + ": "
+						+ "Uncaught exception in SpoolDirectorySource thread. "
+						+ "Restart or reconfigure Flume to continue processing.", t);
+				hasFatalError = true;
+				Throwables.propagate(t);
+			}
+		}
+	}
 }

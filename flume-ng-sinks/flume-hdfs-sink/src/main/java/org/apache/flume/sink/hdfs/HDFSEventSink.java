@@ -343,13 +343,18 @@ public class HDFSEventSink extends AbstractSink implements Configurable {
 	 * HDFS. <br/>
 	 * This method is not thread safe.
 	 */
+
+	// modified by chai wentao
 	public Status process() throws EventDeliveryException {
 		Channel channel = getChannel();
+		long beginTransaction = System.currentTimeMillis();
 		Transaction transaction = channel.getTransaction();
 		List<BucketWriter> writers = Lists.newArrayList();
 		transaction.begin();
+		int txnCount = 0;
 		try {
 			int txnEventCount = 0;
+			long beginFetch = System.currentTimeMillis();
 			for (txnEventCount = 0; txnEventCount < batchSize; txnEventCount++) {
 				Event event = channel.take();
 				if (event == null) {
@@ -408,7 +413,7 @@ public class HDFSEventSink extends AbstractSink implements Configurable {
 					bucketWriter.append(event);
 				}
 			}
-
+			txnCount = txnEventCount;
 			if (txnEventCount == 0) {
 				sinkCounter.incrementBatchEmptyCount();
 			} else if (txnEventCount == batchSize) {
@@ -421,7 +426,11 @@ public class HDFSEventSink extends AbstractSink implements Configurable {
 			for (BucketWriter bucketWriter : writers) {
 				bucketWriter.flush();
 			}
-			LOG.info("write hdfs num = " + txnEventCount + " events path = " + filePath);
+			long endFetch = System.currentTimeMillis();
+			LOG.info(Thread.currentThread().getName() + " fetch and flush" + txnCount + " events path = " + filePath
+					+ " us = " + (endFetch - beginFetch));
+			LOG.info(Thread.currentThread().getName() + " write hdfs num = " + txnEventCount + " events path = "
+					+ filePath);
 			transaction.commit();
 
 			if (txnEventCount < 1) {
@@ -444,6 +453,9 @@ public class HDFSEventSink extends AbstractSink implements Configurable {
 			}
 		} finally {
 			transaction.close();
+			long endTransation = System.currentTimeMillis();
+			LOG.info(Thread.currentThread().getName() + " complete a transaction with " + txnCount
+					+ " events for path = " + filePath + " us = " + (endTransation - beginTransaction));
 		}
 	}
 
