@@ -2,7 +2,7 @@
 *****************************************************
 Summary
 -------
-Generated at: 2017-01-16T12:18:22+08:00
+Generated at: 2017-01-17T10:11:17+08:00
 Notes: 0
 Binaries: 0
 Archives: 0
@@ -242,9 +242,5 @@ public class SpoolDireactoryUtilConstants {
 	  public static final int DEFAULT_BATCH_SIZE = 100;
 	  public static final String DEFAULT_TOPIC = "default-flume-topic";
 	  public static final String DEFAULT_REQUIRED_ACKS = "1";
-	  public static final String DEFAULT_JAVA_AUTHENTICATION_PATH = "kafka_conf/kafka_client_jaas.conf";
-	  public static final String DEFAULT_VALUE_SERIALIZER = "org.apache.kafka.common.serialization.ByteArraySerializer";
-	  public static final String DEFAULT_KEY_SERIALIZER = "org.apache.kafka.common.serialization.StringSerializer";
-	  public static final String DEFAULT_KRB_CONF_PATH = "kafka_conf/krb5.conf";
 	  public static final String DEFAULT_SECURITY_PROTOCAL = "SASL_PLAINTEXT";
 }

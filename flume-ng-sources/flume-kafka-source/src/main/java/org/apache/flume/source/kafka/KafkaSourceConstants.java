@@ -42,6 +42,9 @@ public class KafkaSourceConstants {
 
   public static final String AVRO_EVENT = "useFlumeEventFormat";
   public static final boolean DEFAULT_AVRO_EVENT = false;
+  
+  public static final String THREADS = "threads";
+  public static final String MAXMANAGERLIST = "managerlistsize";
 
   /* Old Properties */
   public static final String ZOOKEEPER_CONNECT_FLUME_KEY = "zookeeperConnect";

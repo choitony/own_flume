@@ -2,42 +2,97 @@
 *****************************************************
 Summary
 -------
-Generated at: 2017-01-05T18:39:56+08:00
+Generated at: 2017-01-18T16:08:41+08:00
 Notes: 0
 Binaries: 0
-Archives: 0
-Standards: 6
+Archives: 1
+Standards: 4
 
-Apache Licensed: 6
+Apache Licensed: 3
 Generated Documents: 0
 
 JavaDocs are generated and so license header is optional
 Generated files do not required license headers
 
-0 Unknown Licenses
+1 Unknown Licenses
 
 *******************************
 
 Unapproved licenses:
 
+  src/main/java/org/apache/flume/source/kafka/KafkaSourceManager.java
 
 *******************************
 
 Archives:
 
+ + src.tar.gz
+ 
 *****************************************************
   Files with Apache License headers will be marked AL
   Binary files (which do not require AL headers) will be marked B
   Compressed archives will be marked A
   Notices, licenses etc will be marked N
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sources/flume-kafka-source/src/test/java/org/apache/flume/source/kafka/KafkaSourceEmbeddedZookeeper.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sources/flume-kafka-source/src/test/java/org/apache/flume/source/kafka/TestKafkaSource.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sources/flume-kafka-source/src/test/java/org/apache/flume/source/kafka/KafkaSourceEmbeddedKafka.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sources/flume-kafka-source/src/main/java/org/apache/flume/source/kafka/KafkaSource.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sources/flume-kafka-source/src/main/java/org/apache/flume/source/kafka/KafkaSourceConstants.java
-  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sources/flume-kafka-source/pom.xml
+  A     src.tar.gz
+  AL    src/main/java/org/apache/flume/source/kafka/KafkaSource.java
+  AL    src/main/java/org/apache/flume/source/kafka/KafkaSourceConstants.java
+ !????? src/main/java/org/apache/flume/source/kafka/KafkaSourceManager.java
+  AL    pom.xml
  
 *****************************************************
  Printing headers for files without AL header...
  
  
+=======================================================================
+==src/main/java/org/apache/flume/source/kafka/KafkaSourceManager.java
+=======================================================================
+package org.apache.flume.source.kafka;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.regex.Pattern;
+
+import org.apache.avro.io.BinaryDecoder;
+import org.apache.avro.io.DecoderFactory;
+import org.apache.avro.specific.SpecificDatumReader;
+import org.apache.flume.Context;
+import org.apache.flume.Event;
+import org.apache.flume.conf.ConfigurationException;
+import org.apache.flume.event.EventBuilder;
+import org.apache.flume.source.avro.AvroFlumeEvent;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import com.google.common.base.Optional;
+
+import scala.annotation.implicitNotFound;
+
+import java.io.ByteArrayInputStream;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
+import java.util.UUID;
+import java.util.concurrent.Callable;
+
+import org.apache.kafka.clients.consumer.ConsumerConfig;
+import org.apache.kafka.clients.consumer.ConsumerRebalanceListener;
+import org.apache.kafka.clients.consumer.ConsumerRecord;
+import org.apache.kafka.clients.consumer.ConsumerRecords;
+import org.apache.kafka.clients.consumer.KafkaConsumer;
+import org.apache.kafka.clients.consumer.OffsetAndMetadata;
+import org.apache.kafka.common.TopicPartition;
+
+public class KafkaSourceManager {
+
+	private static final Logger logger = LoggerFactory.getLogger(KafkaSource.class);
+
+	private int consumerNums;
+	private ExecutorService threadPool;
+

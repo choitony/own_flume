@@ -2,7 +2,7 @@
 *****************************************************
 Summary
 -------
-Generated at: 2017-01-11T15:08:26+08:00
+Generated at: 2017-01-16T17:40:58+08:00
 Notes: 0
 Binaries: 0
 Archives: 0
@@ -30,27 +30,27 @@ Archives:
   Binary files (which do not require AL headers) will be marked B
   Compressed archives will be marked A
   Notices, licenses etc will be marked N
-  AL    src/test/resources/flume-conf.properties
-  AL    src/test/resources/log4j.properties
-  AL    src/test/java/org/apache/flume/source/TestNetcatSource.java
-  AL    src/test/java/org/apache/flume/node/TestPollingPropertiesFileConfigurationProvider.java
-  AL    src/test/java/org/apache/flume/node/TestAbstractZooKeeperConfigurationProvider.java
-  AL    src/test/java/org/apache/flume/node/TestApplication.java
-  AL    src/test/java/org/apache/flume/node/TestAbstractConfigurationProvider.java
-  AL    src/test/java/org/apache/flume/node/TestStaticZooKeeperConfigurationProvider.java
-  AL    src/test/java/org/apache/flume/node/TestPropertiesFileConfigurationProvider.java
-  AL    src/test/java/org/apache/flume/node/TestPollingZooKeeperConfigurationProvider.java
-  AL    src/main/java/org/apache/flume/node/PollingPropertiesFileConfigurationProvider.java
-  AL    src/main/java/org/apache/flume/node/AbstractConfigurationProvider.java
-  AL    src/main/java/org/apache/flume/node/PollingZooKeeperConfigurationProvider.java
-  AL    src/main/java/org/apache/flume/node/MaterializedConfiguration.java
-  AL    src/main/java/org/apache/flume/node/PropertiesFileConfigurationProvider.java
-  AL    src/main/java/org/apache/flume/node/ConfigurationProvider.java
-  AL    src/main/java/org/apache/flume/node/SimpleMaterializedConfiguration.java
-  AL    src/main/java/org/apache/flume/node/AbstractZooKeeperConfigurationProvider.java
-  AL    src/main/java/org/apache/flume/node/StaticZooKeeperConfigurationProvider.java
-  AL    src/main/java/org/apache/flume/node/Application.java
-  AL    pom.xml
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-node/src/test/resources/flume-conf.properties
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-node/src/test/resources/log4j.properties
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-node/src/test/java/org/apache/flume/source/TestNetcatSource.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-node/src/test/java/org/apache/flume/node/TestPollingPropertiesFileConfigurationProvider.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-node/src/test/java/org/apache/flume/node/TestAbstractZooKeeperConfigurationProvider.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-node/src/test/java/org/apache/flume/node/TestApplication.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-node/src/test/java/org/apache/flume/node/TestAbstractConfigurationProvider.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-node/src/test/java/org/apache/flume/node/TestStaticZooKeeperConfigurationProvider.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-node/src/test/java/org/apache/flume/node/TestPropertiesFileConfigurationProvider.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-node/src/test/java/org/apache/flume/node/TestPollingZooKeeperConfigurationProvider.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-node/src/main/java/org/apache/flume/node/PollingPropertiesFileConfigurationProvider.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-node/src/main/java/org/apache/flume/node/AbstractConfigurationProvider.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-node/src/main/java/org/apache/flume/node/PollingZooKeeperConfigurationProvider.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-node/src/main/java/org/apache/flume/node/MaterializedConfiguration.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-node/src/main/java/org/apache/flume/node/PropertiesFileConfigurationProvider.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-node/src/main/java/org/apache/flume/node/ConfigurationProvider.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-node/src/main/java/org/apache/flume/node/SimpleMaterializedConfiguration.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-node/src/main/java/org/apache/flume/node/AbstractZooKeeperConfigurationProvider.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-node/src/main/java/org/apache/flume/node/StaticZooKeeperConfigurationProvider.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-node/src/main/java/org/apache/flume/node/Application.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-node/pom.xml
  
 *****************************************************
  Printing headers for files without AL header...

@@ -427,10 +427,8 @@ public class HDFSEventSink extends AbstractSink implements Configurable {
 				bucketWriter.flush();
 			}
 			long endFetch = System.currentTimeMillis();
-			LOG.info(Thread.currentThread().getName() + " fetch and flush" + txnCount + " events path = " + filePath
+			LOG.info(Thread.currentThread().getId() + " fetch and flush " + txnCount + " events path = " + filePath
 					+ " us = " + (endFetch - beginFetch));
-			LOG.info(Thread.currentThread().getName() + " write hdfs num = " + txnEventCount + " events path = "
-					+ filePath);
 			transaction.commit();
 
 			if (txnEventCount < 1) {
@@ -454,8 +452,6 @@ public class HDFSEventSink extends AbstractSink implements Configurable {
 		} finally {
 			transaction.close();
 			long endTransation = System.currentTimeMillis();
-			LOG.info(Thread.currentThread().getName() + " complete a transaction with " + txnCount
-					+ " events for path = " + filePath + " us = " + (endTransation - beginTransaction));
 		}
 	}
 

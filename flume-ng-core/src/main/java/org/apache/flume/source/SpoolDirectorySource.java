@@ -219,7 +219,6 @@ public class SpoolDirectorySource extends AbstractSource implements Configurable
 			int backoffInterval = 250;
 			try {
 				while (!Thread.interrupted()) {
-					long startTimes = System.currentTimeMillis();
 					if (events == null || events.isEmpty()) {
 						events = reader.readEvents(batchSize);
 					}
@@ -235,7 +234,11 @@ public class SpoolDirectorySource extends AbstractSource implements Configurable
 					sourceCounter.incrementAppendBatchReceivedCount();
 
 					try {
+
+						long starTime = System.currentTimeMillis();
 						addEventBatchToChannel(events);
+						long endTime = System.currentTimeMillis();
+						logger.info("add to channel us time = " + (endTime - starTime));
 						reader.commit();
 					} catch (ChannelException ex) {
 						logger.warn("The channel is full, and cannot write data now. The "
@@ -251,10 +254,6 @@ public class SpoolDirectorySource extends AbstractSource implements Configurable
 					backoffInterval = 250;
 					sourceCounter.addToEventAcceptedCount(events.size());
 					sourceCounter.incrementAppendBatchAcceptedCount();
-
-					long endTimes = System.currentTimeMillis();
-					logger.info(" test thread " + threadId + "input a batch of: " + events.size() + " us: "
-							+ (endTimes - startTimes));
 					events = null;
 				}
 			} catch (Throwable t) {

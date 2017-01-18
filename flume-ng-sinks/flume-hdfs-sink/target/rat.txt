@@ -2,7 +2,7 @@
 *****************************************************
 Summary
 -------
-Generated at: 2017-01-11T16:18:09+08:00
+Generated at: 2017-01-16T17:40:52+08:00
 Notes: 0
 Binaries: 0
 Archives: 0
@@ -30,38 +30,38 @@ Archives:
   Binary files (which do not require AL headers) will be marked B
   Compressed archives will be marked A
   Notices, licenses etc will be marked N
-  AL    src/test/java/org/apache/flume/sink/hdfs/TestHDFSCompressedDataStream.java
-  AL    src/test/java/org/apache/flume/sink/hdfs/MyCustomSerializer.java
-  AL    src/test/java/org/apache/flume/sink/hdfs/MockFsDataOutputStream.java
-  AL    src/test/java/org/apache/flume/sink/hdfs/HDFSBadDataStream.java
-  AL    src/test/java/org/apache/flume/sink/hdfs/TestSequenceFileSerializerFactory.java
-  AL    src/test/java/org/apache/flume/sink/hdfs/MockFileSystem.java
-  AL    src/test/java/org/apache/flume/sink/hdfs/TestUseRawLocalFileSystem.java
-  AL    src/test/java/org/apache/flume/sink/hdfs/MockDataStream.java
-  AL    src/test/java/org/apache/flume/sink/hdfs/TestHDFSEventSinkOnMiniCluster.java
-  AL    src/test/java/org/apache/flume/sink/hdfs/TestBucketWriter.java
-  AL    src/test/java/org/apache/flume/sink/hdfs/MockHDFSWriter.java
-  AL    src/test/java/org/apache/flume/sink/hdfs/HDFSTestWriterFactory.java
-  AL    src/test/java/org/apache/flume/sink/hdfs/HDFSTestSeqWriter.java
-  AL    src/test/java/org/apache/flume/sink/hdfs/TestAvroEventSerializer.java
-  AL    src/test/java/org/apache/flume/sink/hdfs/TestHDFSEventSink.java
-  AL    src/main/java/org/apache/flume/sink/hdfs/SequenceFileSerializer.java
-  AL    src/main/java/org/apache/flume/sink/hdfs/HDFSEventSink.java
-  AL    src/main/java/org/apache/flume/sink/hdfs/AbstractHDFSWriter.java
-  AL    src/main/java/org/apache/flume/sink/hdfs/AvroEventSerializer.java
-  AL    src/main/java/org/apache/flume/sink/hdfs/BucketWriter.java
-  AL    src/main/java/org/apache/flume/sink/hdfs/BucketClosedException.java
-  AL    src/main/java/org/apache/flume/sink/hdfs/HDFSWriterFactory.java
-  AL    src/main/java/org/apache/flume/sink/hdfs/HDFSWriter.java
-  AL    src/main/java/org/apache/flume/sink/hdfs/HDFSWritableSerializer.java
-  AL    src/main/java/org/apache/flume/sink/hdfs/HDFSDataStream.java
-  AL    src/main/java/org/apache/flume/sink/hdfs/HDFSSequenceFile.java
-  AL    src/main/java/org/apache/flume/sink/hdfs/SequenceFileSerializerFactory.java
-  AL    src/main/java/org/apache/flume/sink/hdfs/HDFSTextSerializer.java
-  AL    src/main/java/org/apache/flume/sink/hdfs/SequenceFileSerializerType.java
-  AL    src/main/java/org/apache/flume/sink/hdfs/KerberosUser.java
-  AL    src/main/java/org/apache/flume/sink/hdfs/HDFSCompressedDataStream.java
-  AL    pom.xml
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sinks/flume-hdfs-sink/src/test/java/org/apache/flume/sink/hdfs/TestHDFSCompressedDataStream.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sinks/flume-hdfs-sink/src/test/java/org/apache/flume/sink/hdfs/MyCustomSerializer.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sinks/flume-hdfs-sink/src/test/java/org/apache/flume/sink/hdfs/MockFsDataOutputStream.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sinks/flume-hdfs-sink/src/test/java/org/apache/flume/sink/hdfs/HDFSBadDataStream.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sinks/flume-hdfs-sink/src/test/java/org/apache/flume/sink/hdfs/TestSequenceFileSerializerFactory.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sinks/flume-hdfs-sink/src/test/java/org/apache/flume/sink/hdfs/MockFileSystem.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sinks/flume-hdfs-sink/src/test/java/org/apache/flume/sink/hdfs/TestUseRawLocalFileSystem.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sinks/flume-hdfs-sink/src/test/java/org/apache/flume/sink/hdfs/MockDataStream.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sinks/flume-hdfs-sink/src/test/java/org/apache/flume/sink/hdfs/TestHDFSEventSinkOnMiniCluster.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sinks/flume-hdfs-sink/src/test/java/org/apache/flume/sink/hdfs/TestBucketWriter.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sinks/flume-hdfs-sink/src/test/java/org/apache/flume/sink/hdfs/MockHDFSWriter.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sinks/flume-hdfs-sink/src/test/java/org/apache/flume/sink/hdfs/HDFSTestWriterFactory.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sinks/flume-hdfs-sink/src/test/java/org/apache/flume/sink/hdfs/HDFSTestSeqWriter.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sinks/flume-hdfs-sink/src/test/java/org/apache/flume/sink/hdfs/TestAvroEventSerializer.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sinks/flume-hdfs-sink/src/test/java/org/apache/flume/sink/hdfs/TestHDFSEventSink.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sinks/flume-hdfs-sink/src/main/java/org/apache/flume/sink/hdfs/SequenceFileSerializer.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sinks/flume-hdfs-sink/src/main/java/org/apache/flume/sink/hdfs/HDFSEventSink.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sinks/flume-hdfs-sink/src/main/java/org/apache/flume/sink/hdfs/AbstractHDFSWriter.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sinks/flume-hdfs-sink/src/main/java/org/apache/flume/sink/hdfs/AvroEventSerializer.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sinks/flume-hdfs-sink/src/main/java/org/apache/flume/sink/hdfs/BucketWriter.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sinks/flume-hdfs-sink/src/main/java/org/apache/flume/sink/hdfs/BucketClosedException.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sinks/flume-hdfs-sink/src/main/java/org/apache/flume/sink/hdfs/HDFSWriterFactory.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sinks/flume-hdfs-sink/src/main/java/org/apache/flume/sink/hdfs/HDFSWriter.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sinks/flume-hdfs-sink/src/main/java/org/apache/flume/sink/hdfs/HDFSWritableSerializer.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sinks/flume-hdfs-sink/src/main/java/org/apache/flume/sink/hdfs/HDFSDataStream.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sinks/flume-hdfs-sink/src/main/java/org/apache/flume/sink/hdfs/HDFSSequenceFile.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sinks/flume-hdfs-sink/src/main/java/org/apache/flume/sink/hdfs/SequenceFileSerializerFactory.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sinks/flume-hdfs-sink/src/main/java/org/apache/flume/sink/hdfs/HDFSTextSerializer.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sinks/flume-hdfs-sink/src/main/java/org/apache/flume/sink/hdfs/SequenceFileSerializerType.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sinks/flume-hdfs-sink/src/main/java/org/apache/flume/sink/hdfs/KerberosUser.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sinks/flume-hdfs-sink/src/main/java/org/apache/flume/sink/hdfs/HDFSCompressedDataStream.java
+  AL    /home/chaiwentao/flume_workspace/flume/apache-flume-1.7.0-src/flume-ng-sinks/flume-hdfs-sink/pom.xml
  
 *****************************************************
  Printing headers for files without AL header...

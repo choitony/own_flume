@@ -2,24 +2,25 @@
 *****************************************************
 Summary
 -------
-Generated at: 2017-01-05T18:38:59+08:00
+Generated at: 2017-01-16T17:40:31+08:00
 Notes: 4
 Binaries: 7
 Archives: 0
-Standards: 18
+Standards: 265
 
-Apache Licensed: 18
+Apache Licensed: 264
 Generated Documents: 0
 
 JavaDocs are generated and so license header is optional
 Generated files do not required license headers
 
-0 Unknown Licenses
+1 Unknown Licenses
 
 *******************************
 
 Unapproved licenses:
 
+  README.md
 
 *******************************
 
@@ -35,8 +36,255 @@ Archives:
   AL    conf/flume-env.sh.template
   AL    conf/flume-conf.properties.template
   AL    conf/log4j.properties
+  AL    flume-ng-core_origin/scripts/saveVersion.ps1
+  AL    flume-ng-core_origin/scripts/saveVersion.sh
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/source/TestThriftSource.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/source/http/TestJSONHandler.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/source/http/TestBLOBHandler.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/source/http/TestHTTPSource.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/source/http/FlumeHttpServletRequestWrapper.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/source/TestMultiportSyslogTCPSource.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/source/TestSyslogUdpSource.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/source/TestBasicSourceSemantics.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/source/TestDefaultSourceFactory.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/source/TestSyslogTcpSource.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/source/TestAbstractPollableSource.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/source/TestSyslogUtils.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/source/MockSource.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/source/TestPollableSourceRunner.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/source/TestAvroSource.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/source/TestNetcatSource.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/source/TestStressSource.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/source/TestSpoolDirectorySource.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/source/TestSequenceGeneratorSource.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/source/TestSyslogParser.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/source/TestExecSource.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/TestContext.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/event/TestEventHelper.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/lifecycle/TestLifecycleSupervisor.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/lifecycle/TestLifecycleController.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/tools/TestTimestampRoundDownUtil.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/tools/TestVersionInfo.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/sink/TestThriftSink.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/sink/TestAvroSink.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/sink/TestDefaultSinkFactory.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/sink/TestFailoverSinkProcessor.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/sink/FixedOrderSelector.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/sink/TestLoggerSink.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/sink/TestLoadBalancingSinkProcessor.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/sink/SinkProcessorFactoryTest.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/sink/TestRollingFileSink.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/channel/TestMemoryChannelTransaction.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/channel/MockChannel.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/channel/TestMultiplexingChannelSelector.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/channel/TestReplicatingChannelSelector.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/channel/TestChannelUtils.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/channel/TestBasicChannelSemantics.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/channel/TestMemoryChannelConcurrency.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/channel/TestChannelProcessor.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/channel/TestMemoryChannel.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/channel/AbstractBasicChannelSemanticsTest.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/channel/MockEvent.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/instrumentation/http/TestHTTPMetricsServer.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/instrumentation/kafka/KafkaSourceCounterTest.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/instrumentation/util/TestJMXPollUtil.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/instrumentation/util/JMXTestUtils.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/instrumentation/TestMonitoredCounterGroup.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/serialization/TransientPositionTracker.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/serialization/TestResettableFileInputStream.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/serialization/TestDurablePositionTracker.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/serialization/ResettableTestStringInputStream.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/serialization/TestAvroEventDeserializer.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/serialization/TestHeaderAndBodyTextEventSerializer.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/serialization/TestLineDeserializer.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/serialization/TestBodyTextEventSerializer.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/serialization/SyslogAvroEventSerializer.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/serialization/TestFlumeEventAvroEventSerializer.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/serialization/TestSyslogAvroEventSerializer.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/client/avro/TestSpoolingFileLineReader.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/client/avro/TestReliableSpoolingFileEventReader.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/client/avro/TestBufferedLineReader.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/TestCounterGroup.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/interceptor/TestCensoringInterceptor.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/interceptor/TestRegexFilteringInterceptor.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/interceptor/TestStaticInterceptor.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/interceptor/CensoringInterceptor.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/interceptor/TestRegexExtractorInterceptor.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/interceptor/TestTimestampInterceptor.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/interceptor/TestHostInterceptor.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/interceptor/TestRegexExtractorInterceptorMillisSerializer.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/interceptor/TestRegexExtractorInterceptorPassThroughSerializer.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/interceptor/TestSearchAndReplaceInterceptor.java
+  AL    flume-ng-core_origin/src/test/java/org/apache/flume/formatter/output/TestBucketPath.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/conf/ConfigurableComponent.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/conf/Configurables.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/conf/Configurable.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/source/AbstractEventDrivenSource.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/source/AbstractSource.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/source/ExecSource.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/source/http/HTTPBadRequestException.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/source/http/HTTPSourceConfigurationConstants.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/source/http/JSONHandler.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/source/http/HTTPSourceHandler.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/source/http/HTTPSource.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/source/http/BLOBHandler.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/source/PollableSourceConstants.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/source/ExecSourceConfigurationConstants.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/source/SyslogParser.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/source/StressSource.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/source/SpoolDirectorySource.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/source/MultiportSyslogTCPSource.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/source/SyslogUDPSource.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/source/ThriftSource.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/source/BasicSourceSemantics.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/source/SyslogUtils.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/source/SequenceGeneratorSource.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/source/SyslogTcpSource.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/source/NetcatSource.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/source/AbstractPollableSource.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/source/NetcatSourceConfigurationConstants.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/source/AvroSource.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/source/SyslogSourceConfigurationConstants.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/source/PollableSourceRunner.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/source/EventDrivenSourceRunner.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/source/DefaultSourceFactory.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/source/SpoolDirectorySourceConfigurationConstants.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/event/EventHelper.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/lifecycle/LifecycleException.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/lifecycle/LifecycleController.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/lifecycle/LifecycleState.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/lifecycle/LifecycleAware.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/lifecycle/LifecycleSupervisor.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/SourceRunner.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/ChannelFullException.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/Channel.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/SinkFactory.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/tools/TimestampRoundDownUtil.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/tools/VersionInfo.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/tools/DirectMemoryUtils.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/tools/GetJavaProperty.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/tools/HTTPServerConstraintUtil.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/tools/PlatformDetect.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/VersionAnnotation.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/sink/AvroSink.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/sink/SinkGroup.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/sink/RollingFileSink.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/sink/ThriftSink.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/sink/DefaultSinkFactory.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/sink/FailoverSinkProcessor.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/sink/LoggerSink.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/sink/SinkProcessorFactory.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/sink/LoadBalancingSinkProcessor.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/sink/AbstractSinkSelector.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/sink/DefaultSinkProcessor.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/sink/AbstractRpcSink.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/sink/AbstractSink.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/sink/NullSink.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/sink/AbstractSinkProcessor.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/channel/ChannelUtils.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/channel/ChannelProcessor.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/channel/ChannelSelectorFactory.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/channel/MultiplexingChannelSelector.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/channel/DefaultChannelFactory.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/channel/BasicChannelSemantics.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/channel/AbstractChannel.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/channel/AbstractChannelSelector.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/channel/ReplicatingChannelSelector.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/channel/MemoryChannel.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/channel/BasicTransactionSemantics.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/channel/PseudoTxnMemoryChannel.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/EventDrivenSource.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/Transaction.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/instrumentation/http/HTTPMetricsServer.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/instrumentation/kafka/KafkaSourceCounterMBean.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/instrumentation/kafka/KafkaSinkCounterMBean.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/instrumentation/kafka/KafkaSourceCounter.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/instrumentation/kafka/KafkaSinkCounter.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/instrumentation/kafka/KafkaChannelCounterMBean.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/instrumentation/kafka/KafkaChannelCounter.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/instrumentation/util/JMXPollUtil.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/instrumentation/MonitoringType.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/instrumentation/ChannelProcessorCounter.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/instrumentation/SourceCounter.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/instrumentation/MonitorService.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/instrumentation/SinkCounterMBean.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/instrumentation/GangliaServer.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/instrumentation/MonitoredCounterGroup.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/instrumentation/ChannelCounterMBean.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/instrumentation/SinkCounter.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/instrumentation/SinkProcessorCounter.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/instrumentation/ChannelCounter.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/instrumentation/SourceCounterMBean.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/CounterGroup.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/ChannelSelector.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/ChannelFactory.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/serialization/LengthMeasurable.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/serialization/EventDeserializerFactory.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/serialization/HeaderAndBodyTextEventSerializer.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/serialization/AbstractAvroEventSerializer.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/serialization/DurablePositionTracker.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/serialization/BodyTextEventSerializer.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/serialization/EventSerializerType.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/serialization/FlumeEventAvroEventSerializer.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/serialization/EventSerDe.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/serialization/Resettable.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/serialization/AvroEventDeserializer.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/serialization/ResettableFileInputStream.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/serialization/AvroEventSerializerConfigurationConstants.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/serialization/EventSerializerFactory.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/serialization/DecodeErrorPolicy.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/serialization/Seekable.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/serialization/LineDeserializer.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/serialization/EventDeserializer.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/serialization/PositionTracker.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/serialization/ResettableInputStream.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/serialization/EventSerializer.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/serialization/RemoteMarkable.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/serialization/EventDeserializerType.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/client/avro/ReliableSpoolingFileEventReader.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/client/avro/AvroCLIClient.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/client/avro/EventReader.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/client/avro/ReliableEventReader.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/client/avro/SimpleTextLineEventReader.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/Clock.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/SinkRunner.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/PollableSource.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/SystemClock.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/annotations/InterfaceStability.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/annotations/Recyclable.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/annotations/InterfaceAudience.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/annotations/Disposable.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/Constants.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/Source.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/Sink.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/interceptor/StaticInterceptor.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/interceptor/SearchAndReplaceInterceptor.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/interceptor/InterceptorChain.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/interceptor/RegexExtractorInterceptorPassThroughSerializer.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/interceptor/TimestampInterceptor.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/interceptor/RegexExtractorInterceptorMillisSerializer.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/interceptor/Interceptor.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/interceptor/RegexFilteringInterceptor.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/interceptor/RegexExtractorInterceptor.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/interceptor/InterceptorBuilderFactory.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/interceptor/RegexExtractorInterceptorSerializer.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/interceptor/HostInterceptor.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/interceptor/InterceptorType.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/ChannelException.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/SinkProcessor.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/NamedComponent.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/SourceFactory.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/formatter/output/EventFormatter.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/formatter/output/DefaultPathManager.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/formatter/output/PathManagerFactory.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/formatter/output/BucketPath.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/formatter/output/PathManagerType.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/formatter/output/TextDelimitedOutputFormatter.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/formatter/output/RollTimePathManager.java
+  AL    flume-ng-core_origin/src/main/java/org/apache/flume/formatter/output/PathManager.java
+  AL    flume-ng-core_origin/pom.xml
   AL    doap_Flume.rdf
-  AL    README.md
+ !????? README.md
   AL    DEVNOTES
   N     RELEASE-NOTES
   AL    flume-ng-doc/sphinx/FlumeDeveloperGuide.rst
@@ -64,3 +312,7 @@ Archives:
  Printing headers for files without AL header...
  
  
+=======================================================================
+==README.md
+=======================================================================
+all is just for myself to log my work on flume
