@@ -26,6 +26,7 @@ import org.apache.flume.EventDeliveryException;
 import org.apache.flume.PollableSource;
 import org.apache.flume.Source;
 import org.apache.flume.SourceRunner;
+import org.apache.flume.PollableSource.Status;
 import org.apache.flume.channel.ChannelProcessor;
 import org.apache.flume.lifecycle.LifecycleState;
 import org.slf4j.Logger;
@@ -48,118 +49,138 @@ import org.slf4j.LoggerFactory;
  */
 public class PollableSourceRunner extends SourceRunner {
 
-  private static final Logger logger = LoggerFactory.getLogger(PollableSourceRunner.class);
+	private static final Logger logger = LoggerFactory.getLogger(PollableSourceRunner.class);
 
-  private AtomicBoolean shouldStop;
+	private AtomicBoolean shouldStop;
 
-  private CounterGroup counterGroup;
-  private PollingRunner runner;
-  private Thread runnerThread;
-  private LifecycleState lifecycleState;
+	private CounterGroup counterGroup;
+	private PollingRunner runner;
+	private Thread runnerThread;
+	private LifecycleState lifecycleState;
 
-  public PollableSourceRunner() {
-    shouldStop = new AtomicBoolean();
-    counterGroup = new CounterGroup();
-    lifecycleState = LifecycleState.IDLE;
-  }
+	public PollableSourceRunner() {
+		shouldStop = new AtomicBoolean();
+		counterGroup = new CounterGroup();
+		lifecycleState = LifecycleState.IDLE;
+	}
 
-  @Override
-  public void start() {
-    PollableSource source = (PollableSource) getSource();
-    ChannelProcessor cp = source.getChannelProcessor();
-    cp.initialize();
-    source.start();
+	@Override
+	public void start() {
+		PollableSource source = (PollableSource) getSource();
+		ChannelProcessor cp = source.getChannelProcessor();
+		cp.initialize();
+		source.start();
 
-    runner = new PollingRunner();
+		runner = new PollingRunner();
 
-    runner.source = source;
-    runner.counterGroup = counterGroup;
-    runner.shouldStop = shouldStop;
+		runner.source = source;
+		runner.counterGroup = counterGroup;
+		runner.shouldStop = shouldStop;
 
-    runnerThread = new Thread(runner);
-    runnerThread.setName(getClass().getSimpleName() + "-" + 
-        source.getClass().getSimpleName() + "-" + source.getName());
-    runnerThread.start();
+		runnerThread = new Thread(runner);
+		runnerThread
+				.setName(getClass().getSimpleName() + "-" + source.getClass().getSimpleName() + "-" + source.getName());
+		runnerThread.start();
 
-    lifecycleState = LifecycleState.START;
-  }
+		lifecycleState = LifecycleState.START;
+	}
 
-  @Override
-  public void stop() {
+	@Override
+	public void stop() {
+		Source source = getSource();
+		logger.info("for test: first stop function lifecycleState = " + lifecycleState);
+		source.stop();
+		logger.info("for test: after source stop lifecycleState = " + lifecycleState);
+		logger.info("source " + source.getName() + " stop has completed");
+		runner.shouldStop.set(true);
+		logger.info("for test: after set shouldStop lifecycleState = " + lifecycleState);
+		// TODO: can add a timeout for this action.
+		try {
+			runnerThread.join();
+			logger.info("Source RUNNER for " + source.getName() + " has joined");
+		} catch (InterruptedException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		try {
+			runnerThread.interrupt();
+			runnerThread.join();
+		} catch (InterruptedException e) {
+			logger.warn("Interrupted while waiting for polling runner to stop. Please report this.", e);
+			Thread.currentThread().interrupt();
+		}
 
-    runner.shouldStop.set(true);
+		ChannelProcessor cp = source.getChannelProcessor();
+		cp.close();
 
-    try {
-      runnerThread.interrupt();
-      runnerThread.join();
-    } catch (InterruptedException e) {
-      logger.warn("Interrupted while waiting for polling runner to stop. Please report this.", e);
-      Thread.currentThread().interrupt();
-    }
+		lifecycleState = LifecycleState.STOP;
+	}
 
-    Source source = getSource();
-    source.stop();
-    ChannelProcessor cp = source.getChannelProcessor();
-    cp.close();
+	@Override
+	public String toString() {
+		return "PollableSourceRunner: { source:" + getSource() + " counterGroup:" + counterGroup + " }";
+	}
 
-    lifecycleState = LifecycleState.STOP;
-  }
+	@Override
+	public LifecycleState getLifecycleState() {
+		return lifecycleState;
+	}
 
-  @Override
-  public String toString() {
-    return "PollableSourceRunner: { source:" + getSource() + " counterGroup:"
-        + counterGroup + " }";
-  }
+	public static class PollingRunner implements Runnable {
 
-  @Override
-  public LifecycleState getLifecycleState() {
-    return lifecycleState;
-  }
+		private PollableSource source;
+		private AtomicBoolean shouldStop;
+		private CounterGroup counterGroup;
+		private PollableSource.Status status = PollableSource.Status.READY;
+		private int tryClose = 0;
 
-  public static class PollingRunner implements Runnable {
+		@Override
+		public void run() {
+			logger.debug("Polling runner starting. Source:{}", source);
 
-    private PollableSource source;
-    private AtomicBoolean shouldStop;
-    private CounterGroup counterGroup;
+			while (!shouldStop.get() || !status.equals(PollableSource.Status.BACKOFF)) {
+				counterGroup.incrementAndGet("runner.polls");
+				if (shouldStop.get() == true && status.equals(PollableSource.Status.BACKOFF)) {
+					if (tryClose >= 1) {
+						break;
+					}
+					tryClose++;
+				}
 
-    @Override
-    public void run() {
-      logger.debug("Polling runner starting. Source:{}", source);
+				try {
+					status = source.process();
+					if (status.equals(PollableSource.Status.BACKOFF)) {
+						counterGroup.incrementAndGet("runner.backoffs");
 
-      while (!shouldStop.get()) {
-        counterGroup.incrementAndGet("runner.polls");
+						Thread.sleep(
+								Math.min(
+										counterGroup.incrementAndGet("runner.backoffs.consecutive")
+												* source.getBackOffSleepIncrement(),
+										source.getMaxBackOffSleepInterval()));
+					} else {
+						counterGroup.set("runner.backoffs.consecutive", 0L);
+					}
+				} catch (InterruptedException e) {
+					logger.info("Source runner interrupted. Exiting");
+					counterGroup.incrementAndGet("runner.interruptions");
+				} catch (EventDeliveryException e) {
+					logger.error("Unable to deliver event. Exception follows.", e);
+					counterGroup.incrementAndGet("runner.deliveryErrors");
+				} catch (Exception e) {
+					counterGroup.incrementAndGet("runner.errors");
+					logger.error("Unhandled exception, logging and sleeping for " + source.getMaxBackOffSleepInterval()
+							+ "ms", e);
+					try {
+						Thread.sleep(source.getMaxBackOffSleepInterval());
+					} catch (InterruptedException ex) {
+						Thread.currentThread().interrupt();
+					}
+				}
+			}
+			logger.info("shouldStop = " + shouldStop.get() + "status = " + status);
+			logger.debug("Polling runner exiting. Metrics:{}", counterGroup);
+		}
 
-        try {
-          if (source.process().equals(PollableSource.Status.BACKOFF)) {
-            counterGroup.incrementAndGet("runner.backoffs");
-
-            Thread.sleep(Math.min(
-                counterGroup.incrementAndGet("runner.backoffs.consecutive")
-                * source.getBackOffSleepIncrement(), source.getMaxBackOffSleepInterval()));
-          } else {
-            counterGroup.set("runner.backoffs.consecutive", 0L);
-          }
-        } catch (InterruptedException e) {
-          logger.info("Source runner interrupted. Exiting");
-          counterGroup.incrementAndGet("runner.interruptions");
-        } catch (EventDeliveryException e) {
-          logger.error("Unable to deliver event. Exception follows.", e);
-          counterGroup.incrementAndGet("runner.deliveryErrors");
-        } catch (Exception e) {
-          counterGroup.incrementAndGet("runner.errors");
-          logger.error("Unhandled exception, logging and sleeping for " +
-              source.getMaxBackOffSleepInterval() + "ms", e);
-          try {
-            Thread.sleep(source.getMaxBackOffSleepInterval());
-          } catch (InterruptedException ex) {
-            Thread.currentThread().interrupt();
-          }
-        }
-      }
-
-      logger.debug("Polling runner exiting. Metrics:{}", counterGroup);
-    }
-
-  }
+	}
 
 }

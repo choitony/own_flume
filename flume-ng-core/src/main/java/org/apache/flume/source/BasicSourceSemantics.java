@@ -94,7 +94,7 @@ public abstract class BasicSourceSemantics implements Source, Configurable {
   public synchronized void stop() {
     try {
       doStop();
-      setLifecycleState(LifecycleState.STOP);
+   //   setLifecycleState(LifecycleState.STOP);
     } catch (Exception e) {
       logger.error(String.format(
           "Unexpected error performing stop: name = %s", getName()), e);

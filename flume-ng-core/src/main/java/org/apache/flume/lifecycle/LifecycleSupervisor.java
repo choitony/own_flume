@@ -165,9 +165,10 @@ public class LifecycleSupervisor implements LifecycleAware {
     synchronized (lifecycleAware) {
       Supervisoree supervisoree = supervisedProcesses.get(lifecycleAware);
       supervisoree.status.discard = true;
-      this.setDesiredState(lifecycleAware, LifecycleState.STOP);
       logger.info("Stopping component: {}", lifecycleAware);
       lifecycleAware.stop();
+      logger.info("set DesriedState.");
+      this.setDesiredState(lifecycleAware, LifecycleState.STOP);
     }
     supervisedProcesses.remove(lifecycleAware);
     //We need to do this because a reconfiguration simply unsupervises old

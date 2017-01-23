@@ -107,7 +107,7 @@ public class KafkaSourceManager {
 			e.printStackTrace();
 		}
 		try {
-			if (threadPool.awaitTermination(2, TimeUnit.SECONDS)) {
+			if (!threadPool.awaitTermination(30, TimeUnit.SECONDS)) {
 				threadPool.shutdownNow();
 			}
 		} catch (InterruptedException e) {
